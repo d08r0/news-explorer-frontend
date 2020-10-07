@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mesto</title>
+
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+
+</head>
+<body>
+<div class="root">
+
+  <div class="popup popup-signin">
+    <div class="popup__content">
+      <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close">
+      <h3 class="popup__title">Вход</h3>
+      <form class="popup__form" name="new">
+        <p class="popup__field-name">Email</p>
+        <input id="link" type="url" name="link" class="popup__input popup__input_type-email" minlength="2"
+               maxlength="30"
+               required placeholder="Введите почту">
+        <span id="name-error" class="error">Неправильный формат email</span>
+        <p class="popup__field-name">Пароль</p>
+        <input id="password" type="text" name="password" class="popup__input popup__input_type-password" required
+               placeholder="Введите пароль">
+        <span id="link-error" class="error">Неправильный формат password</span>
+        <button type="submit" class="button popup__button">Войти</button>
+        <p class="popup__loggin">или Зарегистрироваться</p>
+      </form>
+    </div>
+  </div>
+
+  <div class="popup popup-signup">
+    <div class="popup__content">
+      <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close">
+      <h3 class="popup__title">Вход</h3>
+      <form class="popup__form" name="new">
+        <p class="popup__field-name">Email</p>
+        <input id="link" type="url" name="link" class="popup__input popup__input_type-email" minlength="2"
+               maxlength="30"
+               required placeholder="Введите почту">
+        <span id="name-error" class="error">Неправильный формат email</span>
+        <p class="popup__field-name">Пароль</p>
+        <input id="password" type="text" name="password" class="popup__input popup__input_type-password" required
+               placeholder="Введите пароль">
+        <span id="link-error" class="error">Неправильный формат password</span>
+        <p class="popup__field-name">Имя</p>
+        <input id="name" type="text" name="name" class="popup__input popup__input_type-name" required
+               placeholder="Введите своё имя">
+        <span id="link-error" class="error">Неправильный формат Имени</span>
+        <button type="submit" class="button popup__button">Войти</button>
+        <p class="popup__loggin">или Войти</p>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+
+</body>
+</html>
+
+<script src="<%= htmlWebpackPlugin.files.js %>"></script>
