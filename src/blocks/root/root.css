@@ -1,5 +1,7 @@
 .root {
+   border: 1px solid red;
   background-color: white;
+  max-width: 1440px;
   min-height: 100vh;
   font-family: 'Inter';
   -webkit-font-smoothing: antialiased;

@@ -1,0 +1,21 @@
+.about-author__container {
+	/* border: 1px solid red; */
+  display: flex;
+  margin: 80px 216px 0px 104px;
+  /*width: 100%;*/
+  justify-content: center;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .about-author__container {
+    margin: 40px 40px 0px;
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px)  {
+  .about-author__container {
+    margin: 20px 16px 0px 24px;
+    flex-direction: column;
+  }
+}

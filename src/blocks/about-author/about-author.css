@@ -1,0 +1,13 @@
+@import url(./__avatar/about-author__avatar.css);
+@import url(./__container/about-author__container.css);
+@import url(../paragraph/paragraph.css);
+@import url(../title/title.css);
+@import url(./__container-text/about-author__container-text.css);
+
+.about-author {
+	/* border: 1px solid red; */
+  max-width: 100%;
+	margin: 0;
+	display: flex;
+  justify-content: space-between;
+}
