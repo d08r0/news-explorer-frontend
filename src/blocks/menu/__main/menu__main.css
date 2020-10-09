@@ -1,0 +1,25 @@
+.menu__main {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+	display: flex;
+	align-items: center;
+  	text-align: center;
+
+	text-decoration: none;
+	cursor: url(../../../images/Pointer.png), pointer;
+}
+
+.menu__main:hover {
+	transition: opacity 0.3s;
+	opacity: 0.8;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .menu__main {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
