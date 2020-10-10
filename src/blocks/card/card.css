@@ -1,0 +1,23 @@
+@import url(./__image/card__image.css);
+@import url(./__text/card__text.css);
+@import url(./__date/card__date.css);
+@import url(./__title/card__title.css);
+@import url(./__paragraph/card__paragraph.css);
+@import url(./__link/card__link.css);
+@import url(./__favourites/card__favourites.css);
+
+.card {
+	/* border: 1px solid red; */
+	display: flex;
+  flex-direction: column;
+
+  background: #FFFFFF;
+  border-radius: 16px;
+
+  cursor: pointer;
+}
+
+.card:hover {
+	transition: opacity 0.3s;
+	opacity: 0.8;
+}

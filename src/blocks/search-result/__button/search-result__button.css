@@ -1,0 +1,37 @@
+.search-result__button {
+	padding: 0;
+  margin: 0;
+  width: 288px;
+	height: 64px;
+
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+
+	color: #1A1B22;
+	background: #FFFFFF;
+  	border-radius: 80px;
+
+  cursor: url(../../../images/Pointer.png), pointer;
+}
+
+.search-result__button:hover {
+	transition: opacity 0.3s;
+	opacity: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+  .search-result__button {
+    width: 240px;
+    height: 56px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search-result__button {
+    width: 288px;
+    height: 56px;
+  }
+}

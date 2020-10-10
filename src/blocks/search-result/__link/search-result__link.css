@@ -1,0 +1,23 @@
+.search-result__link {
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+
+	display: flex;
+	align-items: center;
+	text-align: center;
+	text-decoration: none;
+	cursor: url(../../../images/Pointer.png), pointer;
+
+	color: #1A1B22;
+}
+
+@media screen and (max-width: 768px) {
+  .search-result__link {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    margin-top: 16.26px;
+  }
+}

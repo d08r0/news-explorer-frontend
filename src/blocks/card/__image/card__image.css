@@ -1,0 +1,34 @@
+.card__image {
+  height: 272px;
+  max-width: 100%;
+	background-size: cover;
+  background-position: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  /*background-image: url("../../../images/park.png");*/
+  position: relative;
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .card__image {
+	  height: 200px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .card__image {
+	  height: 150px;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 767px) {
+  .card__image {
+	  height: 320px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 424px) {
+  .card__image {
+	  height: 196px;
+  }
+}

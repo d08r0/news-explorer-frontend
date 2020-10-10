@@ -1,0 +1,34 @@
+@import url(./__container/search-result__container.css);
+@import url(./__title/search-result__title.css);
+@import url(./__link/search-result__link.css);
+@import url(./__button/search-result__button.css);
+@import url(./__more-cards/search-result__more-cards.css);
+
+.search-result {
+	/* border: 1px solid red; */
+	/*display: none;*/
+  width: 100%;
+	margin: 0;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  background: #F5F6F7;
+}
+
+/*.search-result:hover {*/
+/*	transition: opacity 0.3s;*/
+/*	opacity: 0.8;*/
+/*}*/
+
+@media screen and (max-width: 768px) {
+  .search-result {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search-result {
+    padding-bottom: 32px;
+  }
+}
