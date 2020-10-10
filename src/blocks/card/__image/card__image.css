@@ -1,3 +1,7 @@
+@import url(./_fire/card__image_fire.css);
+@import url(./_park/card__image_park.css);
+@import url(./_taiga/card__image_taiga.css);
+
 .card__image {
   height: 272px;
   max-width: 100%;

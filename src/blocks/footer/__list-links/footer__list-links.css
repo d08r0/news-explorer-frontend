@@ -1,0 +1,34 @@
+.footer__list-links {
+	/* border: 1px solid red; */
+  margin-left: 40px;
+
+  font-family: Roboto, 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+
+  text-align: center;
+
+  color: #1A1B22;
+  text-decoration: none;
+	cursor: url(../../../images/Pointer.png), pointer;
+}
+
+.footer__list-links:hover {
+	transition: opacity 0.3s;
+	opacity: 0.8;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer__list-links {
+    margin-left: 21px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .footer__list-links {
+    line-height: 2.5rem;
+    margin-left: 16px;
+  }
+}

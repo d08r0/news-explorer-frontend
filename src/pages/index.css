@@ -13,6 +13,7 @@
 @import url(../blocks/card/card.css);
 @import url(../blocks/card-list/card-list.css);
 @import url(../blocks/search-result/search-result.css);
+@import url(../blocks/footer/footer.css);
 
 body {
   background-color: white;

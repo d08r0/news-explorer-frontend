@@ -1,6 +1,10 @@
 .search-result__more-cards {
   /* display: none; */
-  margin: 64px auto;
+  /*margin: 64px auto;*/
+  margin-top: 64px;
+  margin-left: auto;
+  margin-right: auto;
+
   text-align: center;
 }
 

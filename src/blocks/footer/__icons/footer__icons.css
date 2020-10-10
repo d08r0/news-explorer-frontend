@@ -1,0 +1,9 @@
+.footer__icons {
+	margin-left: 27.89px;
+	cursor: url(../../../images/Pointer.png), pointer;
+}
+
+.footer__icons:hover {
+	transition: opacity 0.3s;
+	opacity: 0.8;
+}
