@@ -8,7 +8,11 @@ const webpack = require('webpack');
 
 
 module.exports = {
-  entry: './src/script/index.js',
+  // entry: './src/script/index.js',
+  entry: {
+    index: './src/script/index.js',
+    // favorites: './src/script/favorites.js',
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[chunkhash].js'
@@ -82,6 +86,12 @@ module.exports = {
       inject: false,
       template: './src/index.html',
       filename: 'index.html'
+    }),
+
+    new HtmlWebpackPlugin({
+      inject: false,
+      template: './src/favorites.html',
+      filename: 'favorites.html'
     }),
 
     new MiniCssExtractPlugin({

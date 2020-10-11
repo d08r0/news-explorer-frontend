@@ -1,11 +1,13 @@
-@import url(__authorization/menu__authorization.css);
+@import url(__authorization-button/menu__authorization-button.css);
 @import url(./__item/menu__item.css);
 @import url(./__main/menu__main.css);
 @import url(./__action-black/menu__action-black.css);
 @import url(./__color/menu__color_black.css);
 @import url(./__color/menu__color_white.css);
 @import url(./__color/menu__color_grey.css);
-
+@import url(./__authorization/.menu__authorization.css);
+@import url(./__no-authorization/menu__no-authorization.css);
+@import url(./__exit-button-img/menu__exit-button-img.css);
 
 .menu {
   /* border: 1px solid red; */

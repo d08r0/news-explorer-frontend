@@ -15,11 +15,36 @@
   <section class="search">
     <header class="header header__page">
       <a href="./index.html" class="header__logo header__logo_white">NewsAnalyzer</a>
-      <ul class="menu">
-        <li class="menu__item menu__item_action-white"><a href="./index.html" class="menu__main menu__color_white">Главная</a>
-        </li>
-        <li class="menu__item"><a href="" class="menu__authorization menu__color_grey">Авторизация</a></li>
-      </ul>
+
+      <div class="menu__no-authorization">
+        <ul class="menu">
+          <li class="menu__item menu__item_action-white"><a href="./index.html" class="menu__main menu__color_white">Главная</a>
+          </li>
+          <li class="menu__item menu__item_border-white">
+            <a href="" class="menu__authorization-button menu__color_white">Авторизация</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu__authorization">
+        <ul class="menu">
+          <li class="menu__item menu__item_action-white">
+            <a href="./index.html" class="menu__main menu__color_white">Главная</a>
+          </li>
+          <li class="menu__item ">
+            <a href="./favorites.html" class="menu__authorization-button menu__color_white">Сохранённые
+              статьи
+            </a>
+          </li>
+          <li class="menu__item menu__item_border-white">
+            <a href="" class="menu__authorization-button menu__color_white">Грета
+              <img
+                src="<%=require('./images/exit-white.svg').default%>" alt="exit button"
+                class="menu__exit-button-img"></a>
+          </li>
+        </ul>
+      </div>
+
     </header>
     <div class="search__main">
       <h1 class="search__title">Что творится в мире?</h1>
@@ -106,7 +131,7 @@
     <nav class="footer__navigation">
       <ul class="footer__list-item">
         <li><a href="./index.html" class="footer__list-links">Главная</a></li>
-        <li><a href="https://praktikum.yandex.ru/profile/frontend-developer/"
+        <li><a href="https://praktikum.yandex.ru/"
                class="footer__list-links">Яндекс.Практикум</a></li>
       </ul>
       <ul class="footer__list-item-block">
