@@ -1,0 +1,13 @@
+.saved-articles__title {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+  width: 712px;
+  margin-bottom: 24px;
+
+  color: #1A1B22;
+  opacity: 0.5;
+}

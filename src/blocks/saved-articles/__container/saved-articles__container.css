@@ -1,0 +1,8 @@
+.saved-articles__container {
+  /* border: 1px solid red; */
+  /*display: flex;*/
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  max-width: 90%;
+}

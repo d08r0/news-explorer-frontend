@@ -15,104 +15,105 @@
 
   <header class="header header__page">
     <a href="./index.html" class="header__logo header__logo_black">NewsAnalyzer</a>
-
     <div class="menu__authorization">
       <ul class="menu">
         <li class="menu__item"><a href="./index.html" class="menu__main menu__color_black">Главная</a>
         </li>
-        <li class="menu__item menu__item_action-black"><a href="./favorites.html" class="menu__authorization-button menu__color_black">Сохранённые статьи
-        </a>
+        <li class="menu__item menu__item_action-black">
+          <a href="./favorites.html" class="menu__authorization-button menu__color_black">Сохранённые статьи</a>
         </li>
-        <li class="menu__item menu__item_border-black"><a href="" class="menu__authorization-button menu__color_black">Грета <img
-          src="<%=require('./images/exit-black.svg')%>" alt="exit button" class="menu__exit-button-img"></a>
+        <li class="menu__item menu__item_border-black"><a href="" class="menu__authorization-button menu__color_black">Грета
+          <img src="<%=require('./images/exit-black.svg')%>" alt="exit button" class="menu__exit-button-img"></a>
         </li>
       </ul>
     </div>
-
   </header>
 
+  <section class="saved-articles">
+    <div class="saved-articles__container">
+      <p class="saved-articles__title">Сохранённые статьи</p>
+      <h1 class="saved-articles__sub-title">Грета, у вас 5 сохранённых статей</h1>
+      <h2 class="saved-articles__description">По ключевым словам: Природа, Тайга и 2-м другим</h2>
+    </div>
+  </section>
 
-  <div class="search-result">
-    <div class="search-result__container">
-      <h2 class="search-result__title">Результаты поиска</h2>
+  <div class="card-list">
+
+    <div class="card">
+      <div class="card__image card__image_park" alt="Описание фотографии">
+        <button class="card__favourites card__favourites_disable"></button>
+      </div>
+      <div class="card__text">
+        <h3 class="card__date">2 августа, 2019</h3>
+        <h2 class="card__title">Национальное достояние – парки</h2>
+        <p class="card__paragraph">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+          складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к
+          природе.</p>
+        <p class="card__link">ЛЕНТА.РУ</p>
+      </div>
     </div>
 
-    <div class="card-list">
+    <div class="card">
+      <div class="card__image card__image_fire" alt="Описание фотографии">
+        <button class="card__favourites card__favourites_enable"></button>
+      </div>
+      <div class="card__text">
+        <h3 class="card__date">2 августа, 2019</h3>
+        <h2 class="card__title">Лесные огоньки: история одной фотографии</h2>
+        <p class="card__paragraph">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы
+          запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+        <p class="card__link">МЕДУЗА</p>
+      </div>
+    </div>
 
-      <div class="card">
-        <div class="card__image card__image_park" alt="Описание фотографии">
+    <div class="card">
+      <div class="card__image" alt="Описание фотографии">
+        <div class="card__image card__image_taiga" alt="Описание фотографии">
           <button class="card__favourites card__favourites_disable"></button>
         </div>
         <div class="card__text">
           <h3 class="card__date">2 августа, 2019</h3>
-          <h2 class="card__title">Национальное достояние – парки</h2>
-          <p class="card__paragraph">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
-            складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к
-            природе.</p>
-          <p class="card__link">ЛЕНТА.РУ</p>
+          <h2 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
+          <p class="card__paragraph">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о
+            необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+          <p class="card__link">РИА</p>
         </div>
       </div>
+    </div>
 
-      <div class="card">
-        <div class="card__image card__image_fire" alt="Описание фотографии">
-          <button class="card__favourites card__favourites_enable"></button>
+    <div class="card">
+      <div class="card__image" alt="Описание фотографии">
+        <div class="card__image card__image_taiga" alt="Описание фотографии">
+          <button class="card__favourites card__favourites_disable"></button>
         </div>
         <div class="card__text">
           <h3 class="card__date">2 августа, 2019</h3>
-          <h2 class="card__title">Лесные огоньки: история одной фотографии</h2>
-          <p class="card__paragraph">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы
-            запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-          <p class="card__link">МЕДУЗА</p>
+          <h2 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
+          <p class="card__paragraph">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о
+            необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+          <p class="card__link">РИА</p>
         </div>
       </div>
-
-      <div class="card">
-        <div class="card__image" alt="Описание фотографии">
-          <div class="card__image card__image_taiga" alt="Описание фотографии">
-            <button class="card__favourites card__favourites_disable"></button>
-          </div>
-          <div class="card__text">
-            <h3 class="card__date">2 августа, 2019</h3>
-            <h2 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
-            <p class="card__paragraph">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о
-              необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-            <p class="card__link">РИА</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card__image" alt="Описание фотографии">
-          <div class="card__image card__image_taiga" alt="Описание фотографии">
-            <button class="card__favourites card__favourites_disable"></button>
-          </div>
-          <div class="card__text">
-            <h3 class="card__date">2 августа, 2019</h3>
-            <h2 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
-            <p class="card__paragraph">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о
-              необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-            <p class="card__link">РИА</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card__image" alt="Описание фотографии">
-          <div class="card__image card__image_taiga" alt="Описание фотографии">
-            <button class="card__favourites card__favourites_disable"></button>
-          </div>
-          <div class="card__text">
-            <h3 class="card__date">2 августа, 2019</h3>
-            <h2 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
-            <p class="card__paragraph">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о
-              необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-            <p class="card__link">РИА</p>
-          </div>
-        </div>
-      </div>
-
     </div>
+
+    <div class="card">
+      <div class="card__image" alt="Описание фотографии">
+        <div class="card__image card__image_taiga" alt="Описание фотографии">
+          <button class="card__favourites card__favourites_disable"></button>
+        </div>
+        <div class="card__text">
+          <h3 class="card__date">2 августа, 2019</h3>
+          <h2 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
+          <p class="card__paragraph">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о
+            необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+          <p class="card__link">РИА</p>
+        </div>
+      </div>
+    </div>
+
   </div>
+
+  <!--  </div>-->
 
   <footer class="footer">
     <p class="footer__copyright">&#169; 2020 Erik Burygin</p>
