@@ -1,12 +1,12 @@
 {
   "name": "news-explorer-frontend",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=production rimraf dist && webpack --mode production",
-    "dev": "NODE_ENV=development webpack-dev-server --mode development --open --watch",
-    "deploy": "NODE_ENV=production gh-pages -d dist"
+    "start": "rimraf dist && cross-env NODE_ENV=production webpack --mode production",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
+    "deploy": "cross-env NODE_ENV=production gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "@babel/preset-env": "7.10.4",
     "autoprefixer": "9.8.5",
     "babel-loader": "8.1.0",
+    "cross-env": "^7.0.2",
     "css-loader": "3.6.0",
     "cssnano": "4.1.10",
     "eslint": "7.10.0",
@@ -35,6 +36,7 @@
     "image-webpack-loader": "6.0.0",
     "mini-css-extract-plugin": "0.9.0",
     "optimize-css-assets-webpack-plugin": "5.0.3",
+    "pngquant": "^3.1.0",
     "postcss-loader": "3.0.0",
     "style-loader": "1.2.1",
     "webpack": "4.43.0",

@@ -39,7 +39,7 @@
           <li class="menu__item menu__item_border-white">
             <a href="" class="menu__authorization-button menu__color_white">Грета
               <img
-                src="<%=require('./images/exit-white.svg').default%>" alt="exit button"
+                src="<%=require('./images/exit-white.svg')%>" alt="exit button"
                 class="menu__exit-button-img"></a>
           </li>
         </ul>
@@ -115,7 +115,7 @@
 
   <section class="about-author">
     <div class="about-author__container">
-      <img class="about-author__avatar" src="<%=require('./images/author-avatar.png').default%>"
+      <img class="about-author__avatar" src="<%=require('./images/author-avatar.png')%>"
            alt="Фотография автора">
       <div class="about-author__container-text">
         <h2 class="title">Об авторе</h2>
@@ -136,10 +136,10 @@
       </ul>
       <ul class="footer__list-item-block">
         <li><a href="https://www.facebook.com" class="footer__column-links">
-          <img src="<%=require('./images/fb.png').default%>" class="footer__icons" alt="Facebook">
+          <img src="<%=require('./images/fb.png')%>" class="footer__icons" alt="Facebook">
         </a></li>
         <li><a href="https://github.com" class="footer__column-links">
-          <img src="<%=require('./images/github.png').default%>" class="footer__icons" alt="GitHub">
+          <img src="<%=require('./images/github.png')%>" class="footer__icons" alt="GitHub">
         </a></li>
       </ul>
     </nav>
@@ -147,16 +147,16 @@
 
   <div class="popup popup-signin">
     <div class="popup__content">
-      <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close">
+      <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
       <h3 class="popup__title">Вход</h3>
       <form class="popup__form" name="new">
         <p class="popup__field-name">Email</p>
         <input id="link" type="url" name="link" class="popup__input popup__input_type-email" minlength="2"
                maxlength="30"
                required placeholder="Введите почту">
-        <span id="name-error" class="error">Неправильный формат email</span>
+        <span id="name-error1" class="error">Неправильный формат email</span>
         <p class="popup__field-name">Пароль</p>
-        <input id="password" type="text" name="password" class="popup__input popup__input_type-password" required
+        <input id="password1" type="text" name="password" class="popup__input popup__input_type-password" required
                placeholder="Введите пароль">
         <span id="link-error" class="error">Неправильный формат password</span>
         <button type="submit" class="button popup__button">Войти</button>
@@ -167,22 +167,22 @@
 
   <div class="popup popup-signup">
     <div class="popup__content">
-      <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close">
+      <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
       <h3 class="popup__title">Вход</h3>
       <form class="popup__form" name="new">
         <p class="popup__field-name">Email</p>
-        <input id="link" type="url" name="link" class="popup__input popup__input_type-email" minlength="2"
+        <input id="email" type="url" name="link" class="popup__input popup__input_type-email" minlength="2"
                maxlength="30"
                required placeholder="Введите почту">
-        <span id="name-error" class="error">Неправильный формат email</span>
+        <span id="email-error" class="error">Неправильный формат email</span>
         <p class="popup__field-name">Пароль</p>
         <input id="password" type="text" name="password" class="popup__input popup__input_type-password" required
                placeholder="Введите пароль">
-        <span id="link-error" class="error">Неправильный формат password</span>
+        <span id="password-error" class="error">Неправильный формат password</span>
         <p class="popup__field-name">Имя</p>
         <input id="name" type="text" name="name" class="popup__input popup__input_type-name" required
                placeholder="Введите своё имя">
-        <span id="link-error" class="error">Неправильный формат Имени</span>
+        <span id="name-error" class="error">Неправильный формат Имени</span>
         <button type="submit" class="button popup__button">Войти</button>
         <p class="popup__loggin">или Войти</p>
       </form>
@@ -191,7 +191,7 @@
 
   <div class="popup popup-successful">
     <div class="popup-successful__content">
-      <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close">
+      <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
       <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
       <a class="popup-successful__enter" href="URL">Войти</a>
     </div>
@@ -199,8 +199,9 @@
 
 </div>
 
+<script src="<%= htmlWebpackPlugin.files.js %>"></script>
 
 </body>
 </html>
 
-<script src="<%= htmlWebpackPlugin.files.js %>"></script>
+

@@ -24,7 +24,7 @@
         </a>
         </li>
         <li class="menu__item menu__item_border-black"><a href="" class="menu__authorization-button menu__color_black">Грета <img
-          src="<%=require('./images/exit-black.svg').default%>" alt="exit button" class="menu__exit-button-img"></a>
+          src="<%=require('./images/exit-black.svg')%>" alt="exit button" class="menu__exit-button-img"></a>
         </li>
       </ul>
     </div>
@@ -124,10 +124,10 @@
       </ul>
       <ul class="footer__list-item-block">
         <li><a href="https://www.facebook.com" class="footer__column-links">
-          <img src="<%=require('./images/fb.png').default%>" class="footer__icons" alt="Facebook">
+          <img src="<%=require('./images/fb.png')%>" class="footer__icons" alt="Facebook">
         </a></li>
         <li><a href="https://github.com" class="footer__column-links">
-          <img src="<%=require('./images/github.png').default%>" class="footer__icons" alt="GitHub">
+          <img src="<%=require('./images/github.png')%>" class="footer__icons" alt="GitHub">
         </a></li>
       </ul>
     </nav>
@@ -135,8 +135,8 @@
 
 </div>
 
-
+<script src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
 </html>
 
-<script src="<%= htmlWebpackPlugin.files.js %>"></script>
+

@@ -1,23 +1,21 @@
 const path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const isDev = process.env.NODE_ENV === 'development';
 const webpack = require('webpack');
 
+const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
-  // entry: './src/script/index.js',
   entry: {
-    index: './src/script/index.js',
-    // favorites: './src/script/favorites.js',
+    index: './src/scripts/index.js',
+    favorites: './src/scripts/favorites.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js'
+    filename: 'scripts/[name].[chunkhash].js'
   },
-
   module: {
     rules: [
       {
@@ -29,75 +27,64 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-
         use: [
-          (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
-          'css-loader',
-          'postcss-loader'
-        ]
-
-      },
-      {
-        test: /\.(woff|woff2|ttf)$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: './fonts/[name].[ext]'
-          },
-        }
-      },
-      {
-        test: /\.(jpg|jpeg|png|svg|webp)$/,
-        use: [
-
-          'file-loader?name=./images/[name].[ext]',
           {
-            loader: 'image-webpack-loader',
+            loader: MiniCssExtractPlugin.loader,
+            options: { publicPath: '../', },
+          },
+          {
+            loader: 'css-loader',
+            options: { importLoaders: 1 },
+          },
+          {
+            loader: 'postcss-loader',
             options: {
-              mozjpeg: {
-                progressive: true,
-                quality: 65
-              },
-              // optipng.enabled: false will disable optipng
-              optipng: {
-                enabled: false,
-              },
-              pngquant: {
-                quality: [0.65, 0.90],
-                speed: 4
-              },
-              gifsicle: {
-                interlaced: false,
-              },
-              // the webp option will enable WEBP
-              webp: {
-                quality: 75
+              config: {
+                path: __dirname + '/postcss.config.js'
               }
             },
           },
-
-        ],
+        ]
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg|ico)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: './images/[name].[ext]', // указали папку, куда складывать изображения
+              esModule: false
+            }
+          },
+          {
+            loader: "image-webpack-loader",
+            options: {}
+          },
+        ]
+      },
+      {
+        test: /\.(eot|ttf|woff|woff2)$/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "fonts/[name].[ext]",
+          },
+        },
       }
     ]
   },
-
   plugins: [
-    new HtmlWebpackPlugin({
-      inject: false,
-      template: './src/index.html',
-      filename: 'index.html'
-    }),
-
-    new HtmlWebpackPlugin({
-      inject: false,
-      template: './src/favorites.html',
-      filename: 'favorites.html'
-    }),
-
     new MiniCssExtractPlugin({
-      filename: 'style.[contenthash].css'
+      filename: './styles/style.[contenthash].css',
     }),
-
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+      filename: 'index.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/favorites.html',
+      filename: 'favorites.html',
+    }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,
       cssProcessor: require('cssnano'),
@@ -106,12 +93,9 @@ module.exports = {
       },
       canPrint: true
     }),
-
+    new WebpackMd5Hash(),
     new webpack.DefinePlugin({
       'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-    }),
-
-    new WebpackMd5Hash()
+    })
   ]
-
 };
