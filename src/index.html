@@ -94,6 +94,21 @@
 
     </div>
 
+
+    <div class="preloader">
+      <i class="preloader__circle"></i>
+      <p class="preloader__message">Идет поиск новостей...</p>
+    </div>
+    <div class="not-found">
+      <img class="not-found__pic" src="<%=require('./images/not-found.png')%>" alt="Ничего не найдено">
+      <h2 class="not-found__title">Ничего не найдено</h2>
+      <p class="not-found__text">К сожалению по вашему запросу ничего<br> не найдено.</p>
+    </div>
+    <div class="search-error">
+      <h2 class="search-error__title">Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз</h2>
+    </div>
+
+
     <div class="search-result__more-cards">
       <button type="button" class="search-result__button">Показать еще</button>
     </div>
