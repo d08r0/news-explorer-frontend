@@ -7,11 +7,11 @@
 @import url(./__favourites/card__favourites.css);
 
 .card {
-	/* border: 1px solid red; */
+  /*border: 1px solid red;*/
 	display: flex;
   flex-direction: column;
-  height: 576px;
-
+  max-height: 576px;
+  max-width: 400px;
   background: #FFFFFF;
   border-radius: 16px;
 
@@ -21,4 +21,12 @@
 .card:hover {
 	transition: opacity 0.3s;
 	opacity: 0.8;
+}
+
+/* 768px */
+
+@media screen and (max-width: 768px) {
+  .card {
+    height: 420px;
+  }
 }

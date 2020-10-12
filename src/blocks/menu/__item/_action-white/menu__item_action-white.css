@@ -3,3 +3,10 @@
   padding-bottom: 28px;
   box-shadow: inset 0px -2px 0px white;
 }
+
+@media screen and (max-width: 768px) {
+  .menu__item_action-white {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
