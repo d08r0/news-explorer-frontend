@@ -65,32 +65,50 @@
     <div class="card-list">
 
       <div class="card">
+        <picture>
+          <source srcset="<%=require('./images/park-1440.png')%>" media="(max-width: 1441px)">
+          <source srcset="<%=require('./images/park-768.png')%>" media="(max-width: 769px)">
+          <source srcset="<%=require('./images/park-320.png')%>" media="(max-width: 320px)">
           <img class="card__image" src="<%=require('./images/park.png')%>" alt="Описание фотографии">
-          <div class="card__text">
-            <h3 class="card__date">2 августа, 2019</h3>
-            <h2 class="card__title">Национальное достояние – парки</h2>
-            <p class="card__paragraph">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складыв...</p>
-            <p class="card__link">ЛЕНТА.РУ</p>
-          </div>
+        </picture>
+        <div class="card__text">
+          <h3 class="card__date">2 августа, 2019</h3>
+          <h2 class="card__title">Национальное достояние – парки</h2>
+          <p class="card__paragraph">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+            складыв...</p>
+          <p class="card__link">ЛЕНТА.РУ</p>
         </div>
-        <div class="card">
+      </div>
+      <div class="card">
+        <picture>
+          <source srcset="<%=require('./images/fire-1440.png')%>" media="(max-width: 1441px)">
+          <source srcset="<%=require('./images/fire-768.png')%>" media="(max-width: 769px)">
+          <source srcset="<%=require('./images/fire-320.png')%>" media="(max-width: 320px)">
           <img class="card__image" src="<%=require('./images/fire.png')%>" alt="Описание фотографии">
-          <div class="card__text">
-            <h3 class="card__date">2 августа, 2019</h3>
-            <h2 class="card__title">Лесные огоньки: история одной фотографии</h2>
-            <p class="card__paragraph">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складыв...</p>
-            <p class="card__link">МЕДУЗА</p>
-          </div>
+        </picture>
+        <div class="card__text">
+          <h3 class="card__date">2 августа, 2019</h3>
+          <h2 class="card__title">Лесные огоньки: история одной фотографии</h2>
+          <p class="card__paragraph">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+            складыв...</p>
+          <p class="card__link">МЕДУЗА</p>
         </div>
-        <div class="card">
+      </div>
+      <div class="card">
+        <picture>
+          <source srcset="<%=require('./images/taiga-1440.png')%>" media="(max-width: 1441px)">
+          <source srcset="<%=require('./images/taiga-768.png')%>" media="(max-width: 769px)">
+          <source srcset="<%=require('./images/taiga-320.png')%>" media="(max-width: 320px)">
           <img class="card__image" src="<%=require('./images/taiga.png')%>" alt="Описание фотографии">
-          <div class="card__text">
-            <h3 class="card__date">2 августа, 2019</h3>
-            <h2 class="card__title">Национальное достояние – парки</h2>
-            <p class="card__paragraph">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складыв....</p>
-            <p class="card__link">РИА</p>
-          </div>
+        </picture>
+        <div class="card__text">
+          <h3 class="card__date">2 августа, 2019</h3>
+          <h2 class="card__title">Национальное достояние – парки</h2>
+          <p class="card__paragraph">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+            складыв....</p>
+          <p class="card__link">РИА</p>
         </div>
+      </div>
 
     </div>
 
@@ -105,7 +123,8 @@
       <p class="not-found__text">К сожалению по вашему запросу ничего<br> не найдено.</p>
     </div>
     <div class="search-error">
-      <h2 class="search-error__title">Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз</h2>
+      <h2 class="search-error__title">Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер
+        недоступен. Подождите немного и попробуйте ещё раз</h2>
     </div>
 
 

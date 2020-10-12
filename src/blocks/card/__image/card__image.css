@@ -3,8 +3,11 @@
 @import url(./_taiga/card__image_taiga.css);
 
 .card__image {
-  height: 272px;
-  max-width: 100%;
+  /*height: 272px;*/
+  /*max-width: 100%;*/
+  width: 100%;
+  height: 100%;
+
   /*max-width: 400px;*/
 	background-size: cover;
   background-position: center;
@@ -12,6 +15,7 @@
   border-top-right-radius: 10px;
   /*background-image: url("../../../images/park.png");*/
   position: relative;
+  object-fit: cover;
 }
 
 @media (min-width: 1024px) and (max-width: 1440px) {
