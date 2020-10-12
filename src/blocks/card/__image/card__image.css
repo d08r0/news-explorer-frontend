@@ -5,6 +5,7 @@
 .card__image {
   height: 272px;
   max-width: 100%;
+  /*max-width: 400px;*/
 	background-size: cover;
   background-position: center;
   border-top-left-radius: 10px;

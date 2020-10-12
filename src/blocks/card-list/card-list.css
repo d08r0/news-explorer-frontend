@@ -1,8 +1,7 @@
 .card-list {
-	/* border: 1px solid red; */
+  /*border: 1px solid red;*/
   margin: 64px auto;
   max-width: 90%;
-
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;

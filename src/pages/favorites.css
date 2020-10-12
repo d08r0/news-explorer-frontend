@@ -15,6 +15,7 @@
 @import url(../blocks/search-result/search-result.css);
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/saved-articles/saved-articles.css);
+@import url(../blocks/saved-articles-list/saved-articles-list.css);
 
 body {
   background-color: white;
