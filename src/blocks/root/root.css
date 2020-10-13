@@ -1,13 +1,19 @@
 .root {
-   /*border: 1px solid red;*/
+  border: 1px solid red;
+  margin: 0 auto;
+
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   background-color: white;
-  margin-left: auto;
-  margin-right: auto;
   max-width: 1440px;
+  min-width: 320px;
   min-height: 100vh;
-  font-family: 'Inter';
+  /*font-family: 'Inter';*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
 }
 
 @font-face {
@@ -37,45 +43,3 @@
   font-weight: 900;
   src: url("../../vendor/fonts/roboto-bold.woff") format("woff");
 }
-
-.page {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
-  margin: 0 auto;
-
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  text-rendering: optimizeLegibility;
-}
-
-@media screen and (max-width: 1440px) {
-  .page {
-    max-width: 1440px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .page {
-    max-width: 1024px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .page {
-    max-width: 768px;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .page {
-    max-width: 375px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .page {
-    max-width: 320px;
-  }
-}
-

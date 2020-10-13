@@ -23,9 +23,9 @@
 /*  border-radius: 100px;*/
 /*}*/
 
-@media (min-width: 320px) and (max-width: 441px) {
+@media (max-width: 441px) {
   .menu__item {
+    display: none;
     margin-left: 8px;
   }
 }
-

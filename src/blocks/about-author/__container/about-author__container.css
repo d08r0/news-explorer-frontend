@@ -1,5 +1,5 @@
 .about-author__container {
-	/* border: 1px solid red; */
+	 border: 1px solid red;
   display: flex;
   margin: 80px 216px 80px 104px;
   /*width: 100%;*/
@@ -13,7 +13,7 @@
   }
 }
 
-@media (min-width: 320px) and (max-width: 767px)  {
+@media (max-width: 767px)  {
   .about-author__container {
     margin: 20px 16px 0px 24px;
     flex-direction: column;
