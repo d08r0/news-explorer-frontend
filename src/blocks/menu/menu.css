@@ -8,6 +8,7 @@
 @import url(./__authorization/.menu__authorization.css);
 @import url(./__no-authorization/menu__no-authorization.css);
 @import url(./__exit-button-img/menu__exit-button-img.css);
+@import url(./__sandwich/menu__sandwich.css);
 
 .menu {
   /* border: 1px solid red; */

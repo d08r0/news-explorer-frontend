@@ -1,0 +1,10 @@
+.menu__sandwich {
+  display: none;
+}
+
+@media (max-width: 320px) {
+  .menu__sandwich {
+    margin-right: 20px;;
+    display: flex;
+  }
+}
