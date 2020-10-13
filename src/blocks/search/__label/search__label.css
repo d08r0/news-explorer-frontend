@@ -18,8 +18,8 @@
 
 @media (min-width: 320px) and (max-width: 767px) {
   .search__label {
-    margin: 56px 0 0;
-    font-size: 1.25rem;
-	  line-height: 1.625rem;
+    margin: 16px 0 0;
+    font-size: 18px;
+	  line-height: 24px;
   }
 }
