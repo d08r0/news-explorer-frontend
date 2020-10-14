@@ -30,3 +30,33 @@
     height: 420px;
   }
 }
+
+ /*767px */
+
+@media screen and (max-width: 767px) {
+  .card {
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*600px */
+
+@media screen and (max-width: 600px) {
+  .card {
+    max-height: 600px;
+    max-width: 550px;
+  }
+}
+
+ /*500px */
+
+/*@media screen and (max-width: 500px) {*/
+/*  .card {*/
+/*    height: 440px;*/
+/*  }*/
+/*}*/
+
+
+

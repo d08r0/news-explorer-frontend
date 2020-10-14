@@ -23,9 +23,16 @@
 /*  border-radius: 100px;*/
 /*}*/
 
-@media (max-width: 441px) {
+@media (max-width: 600px) {
   .menu__item {
     display: none;
     margin-left: 8px;
   }
 }
+
+/*@media (max-width: 441px) {*/
+/*  .menu__item {*/
+/*    display: none;*/
+/*    margin-left: 8px;*/
+/*  }*/
+/*}*/

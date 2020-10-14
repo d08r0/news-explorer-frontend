@@ -4,7 +4,7 @@
 @import url(../saved-articles/__description/saved-articles__description.css);
 
 .saved-articles {
-  /* border: 1px solid red; */
+   /*border: 1px solid red;*/
   /*display: none;*/
   width: 100%;
   margin: 0;
@@ -28,6 +28,7 @@
 
 @media screen and (max-width: 320px) {
   .saved-articles {
+    max-width: 288px;
     padding-bottom: 32px;
   }
 }

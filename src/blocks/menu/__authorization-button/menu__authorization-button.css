@@ -19,6 +19,13 @@
   opacity: 0.8;
 }
 
+@media (max-width: 767px) {
+  .menu__authorization-button {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .menu__authorization-button {
     font-size: 1rem;
