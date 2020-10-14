@@ -5,15 +5,23 @@
   border-radius: 10px;
   position: relative;
   box-sizing: border-box;
-  /*padding: 34px 36px;*/
-  padding-top: 34px;
-  padding-left: 34px;
-  padding-right: 34px;
-  padding-bottom: 24px;
+  padding: 34px 36px 24px 34px;
 }
 
-@media screen and (max-width: 540px) {
+/*@media screen and (max-width: 540px) {*/
+/*  .popup__content {*/
+/*    width: calc(100% - 60px);*/
+/*  }*/
+/*}*/
+
+@media screen and (max-width: 560px) {
   .popup__content {
-    width: calc(100% - 60px);
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .popup__content {
+    padding: 16px
   }
 }

@@ -22,3 +22,21 @@
   justify-content: center;
   /*display: none;*/
 }
+
+@media screen AND (max-width: 560px) {
+  .popup {
+    align-items: normal;
+    margin-top: 64px;
+    background-color: rgba(0, 0, 0, .0);
+
+  }
+}
+
+@media screen AND (max-width: 320px) {
+  .popup {
+    align-items: normal;
+    margin-top: 64px;
+    background-color: rgba(0, 0, 0, .0);
+
+  }
+}
