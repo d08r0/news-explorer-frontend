@@ -80,10 +80,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       filename: 'index.html',
+      favicon: 'src/images/favicon.ico'
     }),
     new HtmlWebpackPlugin({
       template: 'src/favorites.html',
       filename: 'favorites.html',
+      favicon: 'src/images/favicon.ico'
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,
