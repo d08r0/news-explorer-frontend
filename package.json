@@ -1,7 +1,7 @@
 {
   "name": "news-explorer-frontend",
-  "version": "0.0.22",
-  "description": "",
+  "version": "0.0.23",
+  "description": "Service for searching and saving news by keywords",
   "main": "index.js",
   "scripts": {
     "start": "rimraf dist && cross-env NODE_ENV=production webpack --mode production",
