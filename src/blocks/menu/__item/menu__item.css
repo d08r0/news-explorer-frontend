@@ -30,9 +30,9 @@
   }
 }
 
-/*@media (max-width: 441px) {*/
-/*  .menu__item {*/
-/*    display: none;*/
-/*    margin-left: 8px;*/
-/*  }*/
-/*}*/
+
+@media (max-width: 320px) {
+  .menu__item {
+    margin-left: 8px;
+  }
+}

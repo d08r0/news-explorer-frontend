@@ -1,0 +1,8 @@
+.popup-menu__list {
+  margin: 0 101px 0 0;
+  display: block;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  height: 100%;
+}

@@ -17,6 +17,7 @@
 @import url(../blocks/preloader/preloader.css);
 @import url(../blocks/search-error/search-error.css);
 @import url(../blocks/not-found/not-found.css);
+@import url(../blocks/popup-menu/popup-menu.css);
 
 body {
   background-color: white;

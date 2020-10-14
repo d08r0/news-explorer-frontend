@@ -213,10 +213,35 @@
   </div>
 
   <div class="popup popup-successful">
-    <div class="popup-successful__content">
+    <div class="popup__content">
       <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
       <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
       <a class="popup-successful__enter" href="URL">Войти</a>
+    </div>
+  </div>
+
+
+  <div class="popup-menu">
+    <div class="popup-menu__content">
+      <ul class="popup-menu__list">
+        <li class="popup-menu__item">
+          <a href="./index.html" class="menu__main menu__color_white">Главная</a>
+        </li>
+        <li class="popup-menu__item">
+          <a href="./favorites.html" class="menu__main menu__color_white">Сохранённые
+            статьи
+          </a>
+        </li>
+        <li class="popup-menu__item popup-menu__item_border-white">
+          <a href="" class="menu__authorization-button menu__color_white">Грета
+            <img
+              src="<%=require('./images/exit-white.svg')%>" alt="exit button"
+              class="menu__exit-button-img"></a>
+        </li>
+        <!--        <li class="popup-menu__item popup-menu__item_border-white">-->
+        <!--          <a href="" class="menu__authorization-button menu__color_white">Авторизоваться</a>-->
+        <!--        </li>-->
+      </ul>
     </div>
   </div>
 
