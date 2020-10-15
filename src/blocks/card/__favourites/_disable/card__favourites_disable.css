@@ -1,3 +1,17 @@
 .card__favourites_disable {
-  background-image: url("../../../../images/favourites-disable.svg");
+  position: absolute;
+  z-index: 1;
+  right: 8px;
+  top: 8px;
+
+  width: 40px;
+  height: 40px;
+  background-image: url("../../../../images/favourites-disable-normal.svg");
+
+  transition: .3s ease-out;
+}
+
+.card__favourites_disable:hover {
+  transition: .3s ease-out;
+  background-image: url("../../../../images/favourites-disable-hover.svg");
 }
