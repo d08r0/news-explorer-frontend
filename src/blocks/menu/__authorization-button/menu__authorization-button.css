@@ -1,0 +1,41 @@
+.menu__authorization-button {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+
+  text-decoration: none;
+  cursor: url(../../../images/Pointer.png), pointer;
+}
+
+.menu__authorization-button:hover {
+  transition: opacity 0.3s;
+  opacity: 0.8;
+}
+
+@media (max-width: 767px) {
+  .menu__authorization-button {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+/*@media screen and (max-width: 320px) {*/
+/*  .menu__authorization-button {*/
+/*    font-size: 1rem;*/
+/*    line-height: 1.5rem;*/
+/*  }*/
+/*}*/
+
+@media screen and (max-width: 320px) {
+  .menu__authorization-button {
+    font-size: 18px;
+    line-height: 1.5rem;
+  }
+}

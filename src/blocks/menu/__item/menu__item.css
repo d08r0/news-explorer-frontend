@@ -1,0 +1,38 @@
+@import url(./_action-white/menu__item_action-white.css);
+@import url(./_action-black/menu__item_action-black.css);
+@import url(_border-black/menu__item_border-black.css);
+@import url(_border-white/menu__item_border-white.css);
+
+.menu__item {
+  /* border: 1px solid red; */
+  list-style: none;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  margin-left: 34px;
+}
+
+/*.menu__item:last-of-type {*/
+/*  padding: 12px 20px;*/
+/*  !*height: 48px;*!*/
+/*  !*width: 176px;*!*/
+/*  border: 1px solid white;*/
+/*  border-radius: 100px;*/
+/*}*/
+
+@media (max-width: 600px) {
+  .menu__item {
+    display: none;
+    margin-left: 8px;
+  }
+}
+
+
+@media (max-width: 320px) {
+  .menu__item {
+    margin-left: 8px;
+  }
+}

@@ -1,0 +1,5 @@
+.search__pic-container {
+  z-index: -2;
+  position: absolute;
+	top: 0;
+}

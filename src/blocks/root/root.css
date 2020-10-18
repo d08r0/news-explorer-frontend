@@ -1,0 +1,45 @@
+.root {
+  /*border: 1px solid red;*/
+  margin: 0 auto;
+
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  background-color: white;
+  max-width: 1440px;
+  min-width: 320px;
+  min-height: 100vh;
+  /*font-family: 'Inter';*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style:  normal;
+  font-weight: 500;
+  src: url("../../vendor/fonts/roboto-medium-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style:  normal;
+  font-weight: 400;
+  src: url("../../vendor/fonts/roboto-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style:  normal;
+  font-weight: 400;
+  src: url("../../vendor/fonts/robotoslab-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Roboto Bold';
+  font-style:  normal;
+  font-weight: 900;
+  src: url("../../vendor/fonts/roboto-bold.woff") format("woff");
+}

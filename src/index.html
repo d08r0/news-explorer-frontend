@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>News explorer frontend</title>
+
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+  <link rel="icon" href="<%=require('./images/favicon.ico')%>" type="image/x-icon">
+
+</head>
+<body>
+<div class="root">
+
+  <section class="search">
+    <header class="header header__page">
+      <a href="./index.html" class="header__logo header__logo_white">NewsAnalyzer</a>
+
+      <div class="menu__no-authorization">
+        <ul class="menu">
+          <li class="menu__item menu__item_action-white"><a href="./index.html" class="menu__main menu__color_white">Главная</a>
+          </li>
+          <li class="menu__item menu__item_border-white">
+            <a href="" class="menu__authorization-button menu__color_white">Авторизация</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu__authorization">
+        <ul class="menu">
+          <li class="menu__item menu__item_action-white">
+            <a href="./index.html" class="menu__main menu__color_white">Главная</a>
+          </li>
+          <li class="menu__item ">
+            <a href="./favorites.html" class="menu__authorization-button menu__color_white">Сохранённые
+              статьи
+            </a>
+          </li>
+          <li class="menu__item menu__item_border-white">
+            <a href="" class="menu__authorization-button menu__color_white">Грета
+              <img
+                src="<%=require('./images/exit-white.svg')%>" alt="exit button"
+                class="menu__exit-button-img"></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu__sandwich">
+        <img src="<%=require('./images/icon-menu-white.svg')%>" alt="Описание фотографии">
+      </div>
+
+    </header>
+    <div class="search__main">
+      <h1 class="search__title">Что творится в мире?</h1>
+      <p class="search__label">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
+      <form class="search__search-field" name="search">
+        <input class="search__input" type="text" placeholder="Введите тему новости" minlength='2' maxlength="20"
+               required/>
+        <span id="inputError" class="seach__error"></span>
+        <button class="search__button">Искать</button>
+      </form>
+    </div>
+  </section>
+
+  <div class="search-result">
+    <div class="search-result__container">
+      <h2 class="search-result__title">Результаты поиска</h2>
+    </div>
+    <div class="card-list">
+
+      <article class="card">
+        <picture>
+          <source srcset="<%=require('./images/park-1440.png')%>" media="(max-width: 1441px)">
+          <source srcset="<%=require('./images/park-768.png')%>" media="(max-width: 769px)">
+          <source srcset="<%=require('./images/park-320.png')%>" media="(max-width: 320px)">
+          <img class="card__image" src="<%=require('./images/park.png')%>" alt="Описание фотографии">
+        </picture>
+        <div class="card__text">
+          <h3 class="card__date">2 августа, 2019</h3>
+          <h2 class="card__title">Национальное достояние – парки</h2>
+          <p class="card__paragraph">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+            складыв...</p>
+          <p class="card__link">ЛЕНТА.РУ</p>
+        </div>
+      </article>
+      <article class="card">
+        <picture>
+          <source srcset="<%=require('./images/fire-1440.png')%>" media="(max-width: 1441px)">
+          <source srcset="<%=require('./images/fire-768.png')%>" media="(max-width: 769px)">
+          <source srcset="<%=require('./images/fire-320.png')%>" media="(max-width: 320px)">
+          <img class="card__image" src="<%=require('./images/fire.png')%>" alt="Описание фотографии">
+        </picture>
+        <div class="card__text">
+          <h3 class="card__date">2 августа, 2019</h3>
+          <h2 class="card__title">Лесные огоньки: история одной фотографии</h2>
+          <p class="card__paragraph">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+            складыв...</p>
+          <p class="card__link">МЕДУЗА</p>
+        </div>
+      </article>
+      <article class="card">
+        <picture>
+          <source srcset="<%=require('./images/taiga-1440.png')%>" media="(max-width: 1441px)">
+          <source srcset="<%=require('./images/taiga-768.png')%>" media="(max-width: 769px)">
+          <source srcset="<%=require('./images/taiga-320.png')%>" media="(max-width: 320px)">
+          <img class="card__image" src="<%=require('./images/taiga.png')%>" alt="Описание фотографии">
+        </picture>
+        <div class="card__text">
+          <h3 class="card__date">2 августа, 2019</h3>
+          <h2 class="card__title">Национальное достояние – парки</h2>
+          <p class="card__paragraph">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+            складыв....</p>
+          <p class="card__link">РИА</p>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="preloader">
+      <i class="preloader__circle"></i>
+      <p class="preloader__message">Идет поиск новостей...</p>
+    </div>
+    <div class="not-found">
+      <img class="not-found__pic" src="<%=require('./images/not-found.png')%>" alt="Ничего не найдено">
+      <h2 class="not-found__title">Ничего не найдено</h2>
+      <p class="not-found__text">К сожалению по вашему запросу ничего<br> не найдено.</p>
+    </div>
+    <div class="search-error">
+      <h2 class="search-error__title">Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер
+        недоступен. Подождите немного и попробуйте ещё раз</h2>
+    </div>
+
+    <div class="search-result__more-cards">
+      <button type="button" class="search-result__button">Показать еще</button>
+    </div>
+  </div>
+
+  <section class="about-author">
+    <div class="about-author__container">
+      <img class="about-author__avatar" src="<%=require('./images/author-avatar.png')%>"
+           alt="Фотография автора">
+      <div class="about-author__container-text">
+        <h2 class="title">Об авторе</h2>
+        <p class="paragraph">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут,
+          чем вы занимаетесь, какими технологиями разработки владеете. Также можно рассказать о процессе обучения в
+          Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p class="footer__copyright">&#169; 2020 Erik Burygin</p>
+    <nav class="footer__navigation">
+      <ul class="footer__list-item">
+        <li><a href="./index.html" class="footer__list-links">Главная</a></li>
+        <li><a href="https://praktikum.yandex.ru/"
+               class="footer__list-links">Яндекс.Практикум</a></li>
+      </ul>
+      <ul class="footer__list-item-block">
+        <li><a href="https://www.facebook.com" class="footer__column-links">
+          <img src="<%=require('./images/fb.png')%>" class="footer__icons" alt="Facebook">
+        </a></li>
+        <li><a href="https://github.com" class="footer__column-links">
+          <img src="<%=require('./images/github.png')%>" class="footer__icons" alt="GitHub">
+        </a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <div class="popup popup-signin">
+    <div class="popup__content">
+      <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
+      <h3 class="popup__title">Вход</h3>
+      <form class="popup__form" name="new">
+        <p class="popup__field-name">Email</p>
+        <input id="link" type="url" name="link" class="popup__input popup__input_type-email" minlength="2"
+               maxlength="30"
+               required placeholder="Введите почту">
+        <span id="name-error1" class="error">Неправильный формат email</span>
+        <p class="popup__field-name">Пароль</p>
+        <input id="password1" type="text" name="password" class="popup__input popup__input_type-password" required
+               placeholder="Введите пароль">
+        <span id="link-error" class="error">Неправильный формат password</span>
+        <button type="submit" class="button popup__button">Войти</button>
+        <p class="popup__loggin">или Зарегистрироваться</p>
+      </form>
+    </div>
+  </div>
+
+  <div class="popup popup-signup">
+    <div class="popup__content">
+      <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
+      <h3 class="popup__title">Вход</h3>
+      <form class="popup__form" name="new">
+        <p class="popup__field-name">Email</p>
+        <input id="email" type="url" name="link" class="popup__input popup__input_type-email" minlength="2"
+               maxlength="30"
+               required placeholder="Введите почту">
+        <span id="email-error" class="error">Неправильный формат email</span>
+        <p class="popup__field-name">Пароль</p>
+        <input id="password" type="text" name="password" class="popup__input popup__input_type-password" required
+               placeholder="Введите пароль">
+        <span id="password-error" class="error">Неправильный формат password</span>
+        <p class="popup__field-name">Имя</p>
+        <input id="name" type="text" name="name" class="popup__input popup__input_type-name" required
+               placeholder="Введите своё имя">
+        <span id="name-error" class="error">Неправильный формат Имени</span>
+        <button type="submit" class="button popup__button">Войти</button>
+        <p class="popup__loggin">или Войти</p>
+      </form>
+    </div>
+  </div>
+
+  <div class="popup popup-successful">
+    <div class="popup__content">
+      <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
+      <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
+      <a class="popup-successful__enter" href="URL">Войти</a>
+    </div>
+  </div>
+
+
+  <div class="popup-menu">
+    <div class="popup-menu__content">
+      <ul class="popup-menu__list">
+        <li class="popup-menu__item">
+          <a href="./index.html" class="menu__main menu__color_white">Главная</a>
+        </li>
+        <li class="popup-menu__item">
+          <a href="./favorites.html" class="menu__main menu__color_white">Сохранённые
+            статьи
+          </a>
+        </li>
+        <li class="popup-menu__item popup-menu__item_border-white">
+          <a href="" class="menu__authorization-button menu__color_white">Грета
+            <img
+              src="<%=require('./images/exit-white.svg')%>" alt="exit button"
+              class="menu__exit-button-img"></a>
+        </li>
+        <!--        <li class="popup-menu__item popup-menu__item_border-white">-->
+        <!--          <a href="" class="menu__authorization-button menu__color_white">Авторизоваться</a>-->
+        <!--        </li>-->
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<script src="<%= htmlWebpackPlugin.files.js %>"></script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+.about-author__avatar {
+	/* border: 1px solid red; */
+	max-height: 464px;
+  max-width: 464px;
+  margin-right: 56px;
+
+	border-radius: 1000px;
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .about-author__avatar {
+    max-width: 328px;
+    max-height: 328px;
+    margin-right: 45px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .about-author__avatar {
+    max-width: 232px;
+    max-height: 232px;
+    margin-right: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-author__avatar {
+    max-width: 272px;
+    max-height: 272px;
+    margin-right: 0px;
+    margin-bottom: 24px;
+  }
+}

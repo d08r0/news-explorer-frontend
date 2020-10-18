@@ -1,0 +1,21 @@
+.footer__list-item-block {
+  /*border: 1px solid red;*/
+  margin-right: 46px;
+  padding: 0;
+
+  display: flex;
+  list-style-type: none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer__list-item-block {
+    margin-right: 42px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer__list-item-block {
+    position: absolute;
+    right: 0;
+  }
+}

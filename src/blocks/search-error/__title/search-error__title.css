@@ -1,0 +1,22 @@
+.search-error__title {
+  margin: 0 104px;
+  padding-top: 120px;
+
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+  font-size: 1.125rem;
+	line-height: 1.5rem;
+
+  text-align: center;
+
+	color: #1A1B22;
+}
+
+@media screen and (max-width: 768px) {
+  .search-error__title {
+    font-size: 1rem;
+	  line-height: 1.125rem;
+    margin: 0 40px;
+  }
+}

@@ -1,0 +1,46 @@
+@import url(__authorization-button/menu__authorization-button.css);
+@import url(./__item/menu__item.css);
+@import url(./__main/menu__main.css);
+@import url(./__action-black/menu__action-black.css);
+@import url(./__color/menu__color_black.css);
+@import url(./__color/menu__color_white.css);
+@import url(./__color/menu__color_grey.css);
+@import url(./__authorization/.menu__authorization.css);
+@import url(./__no-authorization/menu__no-authorization.css);
+@import url(./__exit-button-img/menu__exit-button-img.css);
+@import url(./__sandwich/menu__sandwich.css);
+
+.menu {
+  /* border: 1px solid red; */
+  margin: 0 101px 0 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  height: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .menu {
+    margin: 0 59px 0 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    margin: 0 42px 0 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .menu {
+    margin: 0 28px 0 0;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 374px) {
+  .menu {
+    margin: 0 6px 0 0;
+  }
+}
+

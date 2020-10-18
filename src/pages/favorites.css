@@ -1,0 +1,22 @@
+@import url(../vendor/normalize.css);
+@import url(../blocks/root/root.css);
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/error/error.css);
+@import url(../vendor/fonts.css);
+@import url(../blocks/popup-signup/popup-signup.css);
+@import url(../blocks/popup-signin/popup-signin.css);
+@import url(../blocks/popup-successful/popup-successful.css);
+@import url(../blocks/search/search.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/menu/menu.css);
+@import url(../blocks/about-author/about-author.css);
+@import url(../blocks/card/card.css);
+@import url(../blocks/card-list/card-list.css);
+@import url(../blocks/search-result/search-result.css);
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/saved-articles/saved-articles.css);
+@import url(../blocks/saved-articles-list/saved-articles-list.css);
+
+body {
+  background-color: white;
+}

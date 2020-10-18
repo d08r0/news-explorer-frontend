@@ -1,0 +1,32 @@
+.header__logo {
+  margin: 0 0 0 104px;
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 1.25rem;
+  line-height: 1.5rem;
+  display: flex;
+  align-items: center;
+
+	text-decoration: none;
+	cursor: url(../../../images/Pointer.png), pointer;
+}
+
+.header__logo:hover {
+	transition: opacity 0.3s;
+	opacity: 0.8;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header__logo {
+    margin: 0 0 0 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header__logo {
+    margin: 0 0 0 16px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
