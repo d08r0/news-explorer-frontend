@@ -22,7 +22,8 @@
           <li class="menu__item menu__item_action-white"><a href="./index.html" class="menu__main menu__color_white">Главная</a>
           </li>
           <li class="menu__item menu__item_border-white">
-            <a href="" class="menu__authorization-button menu__color_white">Авторизация</a>
+<!--            <a href="" class="menu__authorization-button menu__color_white">Авторизация</a>-->
+            <button class="menu__authorization-button menu__color_white">Авторизация</button>
           </li>
         </ul>
       </div>
@@ -190,22 +191,22 @@
 
   <div class="popup popup-signup">
     <div class="popup__content">
-      <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
+      <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close signup-popup__close">
       <h3 class="popup__title">Вход</h3>
-      <form class="popup__form" name="new">
+      <form class="popup__form" name="formSignup">
         <p class="popup__field-name">Email</p>
-        <input id="email" type="url" name="link" class="popup__input popup__input_type-email" minlength="2"
+        <input id="newEmail" type="email" name="email" class="popup__input popup__input_type-email" minlength="2"
                maxlength="30"
                required placeholder="Введите почту">
-        <span id="email-error" class="error">Неправильный формат email</span>
+        <span id="email-error" class="error"></span>
         <p class="popup__field-name">Пароль</p>
-        <input id="password" type="text" name="password" class="popup__input popup__input_type-password" required
+        <input id="newPassword" type="text" name="password" class="popup__input popup__input_type-password" required
                placeholder="Введите пароль">
-        <span id="password-error" class="error">Неправильный формат password</span>
+        <span id="password-error" class="error"></span>
         <p class="popup__field-name">Имя</p>
-        <input id="name" type="text" name="name" class="popup__input popup__input_type-name" required
+        <input id="newName" type="text" name="name" class="popup__input popup__input_type-name" required
                placeholder="Введите своё имя">
-        <span id="name-error" class="error">Неправильный формат Имени</span>
+        <span id="name-error" class="error"></span>
         <button type="submit" class="button popup__button">Войти</button>
         <p class="popup__loggin">или Войти</p>
       </form>

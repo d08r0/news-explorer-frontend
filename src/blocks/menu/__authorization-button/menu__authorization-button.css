@@ -11,6 +11,8 @@
   margin-left: auto;
 
   text-decoration: none;
+  background: none;
+  border: none;
   cursor: url(../../../images/Pointer.png), pointer;
 }
 
