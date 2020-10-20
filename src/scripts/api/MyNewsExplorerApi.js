@@ -53,4 +53,19 @@ export default class MyNewsExplorerApi {
         return data;
       });
   }
+
+  // Запрос данных пользователя
+  getUserData() {
+    return fetch(`${this.url}/users/me`, {
+      headers: {
+        authorization: `Bearer ${localStorage.getItem('token')}`,
+      },
+    })
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+        return Promise.reject(res.status);
+      });
+  }
 }
