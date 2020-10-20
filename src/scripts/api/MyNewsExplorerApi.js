@@ -68,4 +68,19 @@ export default class MyNewsExplorerApi {
         return Promise.reject(res.status);
       });
   }
+
+  // Запрос статей пользователя
+  getArticles() {
+    return fetch(`${this.url}/articles`, {
+      headers: {
+        authorization: `Bearer ${localStorage.getItem('token')}`,
+      },
+    })
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+        return Promise.reject(res.status);
+      });
+  }
 }
