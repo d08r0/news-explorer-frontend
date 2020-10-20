@@ -4,13 +4,23 @@ import FormValidator from "./components/FormValidator";
 import {myNewsExplorerApi, NO_INTERNET, USER_EXISTS} from "./constants/Constants";
 
 const popupSignup = document.querySelector('.popup-signup');
+const popupSuccessful = document.querySelector('.popup-successful');
+
 const formSignup = document.forms.formSignup;
 const newEmail = formSignup.elements.newEmail;
 const newPassword = formSignup.elements.newPassword;
 const newName = formSignup.elements.newName;
 const buttonAuthorization = document.querySelector('.menu__authorization-button');
 const buttonPopupSignupClose = document.querySelector('.signup-popup__close');
+const buttonPopupSuccessfulClose = document.querySelector('.popup-successful__close');
 const popupSignupButton = document.querySelector('.signup-popup__button');
+
+//Рендер попапа успешной регистрации
+function handlerRenderPopupSuccessful() {
+  const popup = new Popup(popupSuccessful);
+  closePopupSignup();
+  popup.open();
+}
 
 //Рендер попапа регистрации
 function handlerRenderPopupSignup() {
@@ -25,6 +35,12 @@ function handlerRenderPopupSignup() {
   popup.open();
 }
 
+//Закрытие попапа успешной регистрации
+function closePopupSignup() {
+  const popup = new Popup(popupSignup);
+  popup.close();
+}
+
 // Регистрация пользователя
 function signup(event) {
   event.preventDefault();
@@ -34,7 +50,7 @@ function signup(event) {
 
   myNewsExplorerApi.signup(userEmail, userPassword, userName)
     .then(() => {
-      openFormSuccessSignup();
+      handlerRenderPopupSuccessful();
     })
     .catch((err) => {
       if (err === '500') {
@@ -47,6 +63,11 @@ function signup(event) {
 
 buttonPopupSignupClose.addEventListener('click', () => {
   const popup = new Popup(popupSignup);
+  popup.close();
+});
+
+buttonPopupSuccessfulClose.addEventListener('click', () => {
+  const popup = new Popup(popupSuccessful);
   popup.close();
 });
 
