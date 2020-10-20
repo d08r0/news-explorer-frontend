@@ -83,4 +83,31 @@ export default class MyNewsExplorerApi {
         return Promise.reject(res.status);
       });
   }
+
+  // Создание статьи
+  createArticle(userKeyword, userTitle, userText, userDate,
+                userSource, userLink, userImage) {
+    return fetch(`${this.url}/articles`, {
+      method: 'POST',
+      body: JSON.stringify({
+        keyword: userKeyword,
+        title: userTitle,
+        text: userText,
+        date: userDate,
+        source: userSource,
+        link: userLink,
+        image: userImage,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+        authorization: `Bearer ${localStorage.getItem('token')}`,
+      },
+    })
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+        return Promise.reject(res.status);
+      });
+  }
 }

@@ -1,6 +1,6 @@
 {
   "name": "news-explorer-frontend",
-  "version": "0.0.33",
+  "version": "0.0.34",
   "description": "Service for searching and saving news by keywords",
   "main": "index.js",
   "scripts": {
