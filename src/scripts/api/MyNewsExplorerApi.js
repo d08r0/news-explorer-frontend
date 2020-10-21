@@ -45,11 +45,8 @@ export default class MyNewsExplorerApi {
         return Promise.reject(res.status);
       })
       .then((data) => {
-        localStorage.setItem('token', data.userToken);
-        localStorage.setItem('user', JSON.stringify({
-          email: data.email,
-          name: data.name,
-        }));
+        localStorage.setItem('token', JSON.stringify(data.token));
+        // console.log(localStorage.getItem('token'));
         return data;
       });
   }

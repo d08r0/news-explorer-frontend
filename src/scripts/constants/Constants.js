@@ -1,4 +1,5 @@
 import MyNewsExplorerApi from '../api/MyNewsExplorerApi';
+import Header from "../components/Header";
 
 const errorMessages = {
   empty: 'Это обязательное поле',
@@ -8,8 +9,9 @@ const errorMessages = {
 
 const USER_EXISTS = 'Пользователь занят';
 const NO_INTERNET = 'Отсутствует интернет соединение';
+const USER_NOT_REGISTERED = 'Такого пользователя нет';
 
-//Конфигурация MyNewsExplorerApi
+// Конфигурация MyNewsExplorerApi
 const configMyNewsExplorerApi = {
   // url: 'http://api.my-news-explorer.tk/',
   url: 'http://localhost:3000',
@@ -19,11 +21,16 @@ const configMyNewsExplorerApi = {
   }
 };
 
+// Header
+const header = new Header();
+
 const myNewsExplorerApi = new MyNewsExplorerApi(configMyNewsExplorerApi);
 
 export {
   myNewsExplorerApi,
   errorMessages,
   NO_INTERNET,
-  USER_EXISTS
+  USER_EXISTS,
+  USER_NOT_REGISTERED,
+  header
 }

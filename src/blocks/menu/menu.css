@@ -9,6 +9,7 @@
 @import url(./__no-authorization/menu__no-authorization.css);
 @import url(./__exit-button-img/menu__exit-button-img.css);
 @import url(./__sandwich/menu__sandwich.css);
+@import url(./__hide/menu__hide.css);
 
 .menu {
   /* border: 1px solid red; */
