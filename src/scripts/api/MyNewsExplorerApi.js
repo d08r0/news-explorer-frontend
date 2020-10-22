@@ -75,6 +75,7 @@ export default class MyNewsExplorerApi {
     })
       .then((res) => {
         if (res.ok) {
+          // console.log(res.json());
           return res.json();
         }
         return Promise.reject(res.status);
