@@ -1,5 +1,6 @@
 import MyNewsExplorerApi from '../api/MyNewsExplorerApi';
 import Header from "../components/Header";
+import NewsApi from "../api/NewsApi";
 
 const errorMessages = {
   empty: 'Это обязательное поле',
@@ -21,6 +22,12 @@ const configMyNewsExplorerApi = {
   }
 };
 
+// Конфигурация NewsAPI
+const newsURL = 'https://newsapi.org/v2/everything?';
+const apiKey = 'acc260241f7245f399853d8a25739fcf';
+const newsApi = new NewsApi(newsURL, apiKey);
+
+
 // Header
 const header = new Header();
 
@@ -32,5 +39,6 @@ export {
   NO_INTERNET,
   USER_EXISTS,
   USER_NOT_REGISTERED,
-  header
+  header,
+  newsApi
 }

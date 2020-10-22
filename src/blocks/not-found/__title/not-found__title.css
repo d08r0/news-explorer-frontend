@@ -1,20 +1,29 @@
-.not-found__title {
-	margin-top: 31px;
+@media (max-width: 767px) {
+  .not-found__title {
+    font-family: Roboto Slab, arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    display: none;
 
-	font-family: 'Roboto', Arial, Helvetica, sans-serif;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 1.625rem;
-	line-height: 1.875rem;
+    text-align: center;
 
-	text-align: center;
-
-	color: #1A1B22;
+    color: #1A1B22;
+  }
 }
 
-@media screen and (max-width: 768px) {
+@media (min-width: 768px) {
   .not-found__title {
-    font-size: 1.125rem;
-	  line-height: 1.5rem;
+    font-family: Roboto Slab, arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    display: none;
+
+    text-align: center;
+
+    color: #1A1B22;
   }
 }

@@ -7,6 +7,7 @@ export default class Header {
 
   // Рендер Header
   render(isLoggedIn) {
+
     if (isLoggedIn) {
       menuNoAuthorization.classList.add('menu__hide');
     } else {

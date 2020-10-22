@@ -45,8 +45,8 @@ export default class MyNewsExplorerApi {
         return Promise.reject(res.status);
       })
       .then((data) => {
-        localStorage.setItem('token', JSON.stringify(data.token));
-        // console.log(localStorage.getItem('token'));
+        // localStorage.setItem('token', JSON.stringify(data.token));
+        localStorage.setItem('token', data.token);
         return data;
       });
   }
@@ -97,7 +97,10 @@ export default class MyNewsExplorerApi {
       }),
       headers: {
         'Content-Type': 'application/json',
+        // authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjhmNTFlZWE0YmJmZmRkYWI2ZWIyZWMiLCJpYXQiOjE2MDMyOTk4MzUsImV4cCI6MTYwMzkwNDYzNX0.v-xl110Iw0jF-y74xJZfAAPWm6WRZ0qTb9nXmDnPbq0',
         authorization: `Bearer ${localStorage.getItem('token')}`,
+        // 'authorization': 'Bearer '+localStorage.getItem('token'),
+
       },
     })
       .then((res) => {
