@@ -132,7 +132,7 @@
 
   <div class="popup popup-signin">
     <div class="popup__content">
-      <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
+      <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close signin-popup__close">
       <h3 class="popup__title">Вход</h3>
       <form class="popup__form" name="formSignun">
         <p class="popup__field-name">Email</p>
@@ -178,7 +178,8 @@
     <div class="popup__content">
       <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close popup-successful__close">
       <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
-      <a class="popup-successful__enter" href="URL">Войти</a>
+<!--      <a class="popup-successful__enter" href="URL">Войти</a>-->
+      <button type="submit" class="popup-successful__enter">Войти</button>
     </div>
   </div>
 

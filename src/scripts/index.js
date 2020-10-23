@@ -22,6 +22,8 @@ const password = formSignin.elements.userPassword;
 
 const buttonAuthorization = document.querySelector('.menu__authorization-button');
 const buttonPopupSignupClose = document.querySelector('.signup-popup__close');
+const buttonPopupSigninClose = document.querySelector('.signin-popup__close');
+
 const buttonPopupSuccessfulClose = document.querySelector('.popup-successful__close');
 const popupSignupButton = document.querySelector('.signup-popup__button');
 const popupSigninButton = document.querySelector('.signin-popup__button');
@@ -35,6 +37,7 @@ const resultsList = document.querySelector('.results__list');
 const logoutButton = document.querySelector('.menu__logout');
 const popupSigninToSignupButton = document.querySelector('.popup__signup-button');
 const popupSignupToSigninButton = document.querySelector('.popup__login-button');
+const popupSuccessfulEnter = document.querySelector('.popup-successful__enter');
 
 
 
@@ -140,7 +143,7 @@ function handlerRenderPopupSignup() {
   popup.open();
 }
 
-//Закрытие попапарегистрации
+//Закрытие попапа регистрации
 function closePopupSignup() {
   const popup = new Popup(popupSignup);
   popup.close();
@@ -155,6 +158,14 @@ function closePopupSignin() {
 // Переход с попапа регистрации на попап авторизации
 function signupToSignin() {
   closePopupSignup();
+  handlerRenderPopupSignin();
+}
+
+// Переход с попапа успешной регистрации на попап авторизации
+function successfulToSignin() {
+  const popup = new Popup(popupSuccessful);
+
+  popup.close();
   handlerRenderPopupSignin();
 }
 
@@ -218,3 +229,7 @@ searchForm.addEventListener('submit', cardRender);
 logoutButton.addEventListener('click', logout);
 popupSigninToSignupButton.addEventListener('click', handlerRenderPopupSignup);
 popupSignupToSigninButton.addEventListener('click', signupToSignin);
+
+popupSuccessfulEnter.addEventListener('click', successfulToSignin);
+
+buttonPopupSigninClose.addEventListener('click', closePopupSignin);
