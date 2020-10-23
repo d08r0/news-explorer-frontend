@@ -33,6 +33,8 @@ const results = document.querySelector('.results');
 const resultsList = document.querySelector('.results__list');
 
 const logoutButton = document.querySelector('.menu__logout');
+const popupLoginButton = document.querySelector('.popup__login-button');
+
 
 
 const maxCount = 3;
@@ -128,6 +130,8 @@ function handlerRenderPopupSignup() {
   const popupButton = formSignup.querySelector('.popup__button');
   const formValidator = new FormValidator(formSignup);
 
+  closePopupSignin();
+
   formValidator.setEventListeners()
   popupButton.setAttribute('disabled', "");
   formValidator.resetError(formSignup);
@@ -175,8 +179,6 @@ function signin(event) {
 
   myNewsExplorerApi.signin(userEmail, userPassword)
     .then((data) => {
-      // menuNoAuthorization.classList.toggle('menu__hide');
-      // menuAuthorization.classList.toggle('menu__hide');
       closePopupSignin();
       document.location.reload();
     })
@@ -207,3 +209,4 @@ popupSigninButton.addEventListener('click', signin);
 showMoreButton.addEventListener('click', moreResults);
 searchForm.addEventListener('submit', cardRender);
 logoutButton.addEventListener('click', logout);
+popupLoginButton.addEventListener('click', handlerRenderPopupSignup);
