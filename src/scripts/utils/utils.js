@@ -1,3 +1,5 @@
+import { myNewsExplorerApi } from "../constants/Constants";
+
 const noResults = document.querySelector('.not-found');
 const noResultsText = document.querySelector('.not-found__text');
 const noResultsTitle = document.querySelector('.not-found__title');
@@ -5,13 +7,13 @@ const noResultsTitle = document.querySelector('.not-found__title');
 const errorResultText = 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз';
 
 
-// Возвращает юзера
+// Возвращает токен из localStorage
 function getUser(item) {
   return localStorage.getItem(item);
   // return JSON.parse(localStorage.getItem(item));
 }
 
-// Возвращает профиль юзера
+// Возвращает токен юзера
 const getProfile = getUser('token');
 
 // Прелоудер
