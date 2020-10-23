@@ -33,7 +33,8 @@ const results = document.querySelector('.results');
 const resultsList = document.querySelector('.results__list');
 
 const logoutButton = document.querySelector('.menu__logout');
-const popupLoginButton = document.querySelector('.popup__login-button');
+const popupSigninToSignupButton = document.querySelector('.popup__signup-button');
+const popupSignupToSigninButton = document.querySelector('.popup__login-button');
 
 
 
@@ -151,6 +152,12 @@ function closePopupSignin() {
   popup.close();
 }
 
+// Переход с попапа регистрации на попап авторизации
+function signupToSignin() {
+  closePopupSignup();
+  handlerRenderPopupSignin();
+}
+
 // Регистрация пользователя
 function signup(event) {
   event.preventDefault();
@@ -209,4 +216,5 @@ popupSigninButton.addEventListener('click', signin);
 showMoreButton.addEventListener('click', moreResults);
 searchForm.addEventListener('submit', cardRender);
 logoutButton.addEventListener('click', logout);
-popupLoginButton.addEventListener('click', handlerRenderPopupSignup);
+popupSigninToSignupButton.addEventListener('click', handlerRenderPopupSignup);
+popupSignupToSigninButton.addEventListener('click', signupToSignin);

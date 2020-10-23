@@ -8,7 +8,8 @@
 @import url(./__save-button/popup-user-info__save-button.css);
 @import url(./__field-name/popup__field-name.css);
 @import url(./__loggin/popup__loggin.css);
-@import url(./__login-button/popup__login-button.css);
+@import url(__signup-button/popup__signup-button.css);
+@import url(__login-button/popup__login-button.css);
 
 
 .popup {

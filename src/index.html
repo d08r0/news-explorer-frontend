@@ -145,7 +145,7 @@
                placeholder="Введите пароль">
         <span id="link-error" class="error">Неправильный формат password</span>
         <button type="submit" class="button popup__button signin-popup__button">Войти</button>
-        <p class="popup__loggin">или <button class="popup__login-button">Зарегистрироваться</button></p>
+        <p class="popup__loggin">или <button class="popup__signup-button">Зарегистрироваться</button></p>
       </form>
     </div>
   </div>
@@ -153,7 +153,7 @@
   <div class="popup popup-signup">
     <div class="popup__content">
       <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close signup-popup__close">
-      <h3 class="popup__title">Вход</h3>
+      <h3 class="popup__title">Регистрация</h3>
       <form class="popup__form" name="formSignup">
         <p class="popup__field-name">Email</p>
         <input id="newEmail" type="email" name="email" class="popup__input popup__input_type-email" minlength="2"
@@ -169,7 +169,7 @@
                placeholder="Введите своё имя">
         <span id="name-error" class="error"></span>
         <button type="submit" class="button popup__button signup-popup__button">Регистрация</button>
-        <p class="popup__loggin">или Войти</p>
+        <p class="popup__loggin">или <button class="popup__login-button">Войти</button></p>
       </form>
     </div>
   </div>
