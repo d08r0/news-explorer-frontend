@@ -39,7 +39,8 @@
             </a>
           </li>
           <li class="menu__item menu__item_border-white">
-            <a href="" class="menu__authorization-button menu__color_white">Грета
+            <a href="" class="menu__authorization-button menu__color_white">
+              <span class="menu__logout-button"></span>
               <img
                 src="<%=require('./images/exit-white.svg')%>" alt="exit button"
                 class="menu__exit-button-img"></a>
@@ -56,7 +57,8 @@
       <h1 class="search__title">Что творится в мире?</h1>
       <p class="search__label">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
       <form class="search__search-field" name="search">
-        <input class="search__input" name="keyword" type="text" placeholder="Введите тему новости" minlength='2' maxlength="20"
+        <input class="search__input" name="keyword" type="text" placeholder="Введите тему новости" minlength='2'
+               maxlength="20"
                required/>
         <span id="inputError" class="seach__error"></span>
         <button class="search__button">Искать</button>
@@ -64,7 +66,7 @@
     </div>
   </section>
 
-<!--  =======================-->
+  <!--  =======================-->
   <section class="preloader">
     <div class="preloader-container">
       <i class="preloader-circle">
@@ -94,7 +96,7 @@
     <button class="results__more-button results__more-button_is-opened">Показать еще
     </button>
   </section>
-<!--  ===================-->
+  <!--  ===================-->
 
   <section class="about-author">
     <div class="about-author__container">

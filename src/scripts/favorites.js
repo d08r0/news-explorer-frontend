@@ -1,7 +1,8 @@
 import "../pages/favorites.css";
 import SaveCard from "./components/SaveCard";
 import NewsCardList from "./components/NewsCardList";
-import {myNewsExplorerApi} from "./constants/Constants";
+import {header, myNewsExplorerApi} from "./constants/Constants";
+import {getProfile} from "./utils/utils";
 
 const resultsList = document.querySelector('.results__list');
 
@@ -14,6 +15,7 @@ const favoritesOthers = document.querySelector('.favorites__others');
 const favoritesOthersCount = document.querySelector('.favorites__others-count');
 
 const favoritesTextInsert = document.querySelector('.favorites__text-insert');
+const menuLogoutButton = document.querySelector('.menu__logout-button');
 
 
 // страница saved-articles
@@ -28,9 +30,12 @@ const sortKeys = {};
 
 let userName = '';
 
+// myNewsExplorerApi.getUserData().then((data) => {
+//   return userName = data.name
+// });
 
 myNewsExplorerApi.getUserData().then((data) => {
-  return userName = data.name
+  menuLogoutButton.textContent = data.name;
 });
 
 // получения объекта вида {'ключевое слово': 'count'},

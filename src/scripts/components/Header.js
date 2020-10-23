@@ -1,3 +1,5 @@
+import { myNewsExplorerApi } from "../constants/Constants";
+
 const menuAuthorization = document.querySelector('.menu__authorization');
 const menuNoAuthorization = document.querySelector('.menu__no-authorization');
 
@@ -10,11 +12,15 @@ export default class Header {
 
     if (isLoggedIn) {
       menuNoAuthorization.classList.add('menu__hide');
+
+      myNewsExplorerApi.getUserData().then((data) => {
+        menuLogoutButton.textContent = data.name;
+      });
+
     } else {
       menuAuthorization.classList.add('menu__hide');
     }
   }
-
 }
 
 
