@@ -2,7 +2,7 @@ import "../pages/index.css";
 import Popup from './components/Popup';
 import FormValidator from "./components/FormValidator";
 import {header, myNewsExplorerApi, newsApi, NO_INTERNET, USER_EXISTS, USER_NOT_REGISTERED} from "./constants/Constants";
-import {emptyResults, errorResults, getProfile, preloader, removeAllChild} from "./utils/utils.js";
+import {emptyResults, errorResults, getProfile, preloader, removeAllChild, logout} from "./utils/utils.js";
 
 import NewsCard from "./components/NewsCard";
 import NewsCardList from "./components/NewsCardList";
@@ -26,14 +26,14 @@ const buttonPopupSuccessfulClose = document.querySelector('.popup-successful__cl
 const popupSignupButton = document.querySelector('.signup-popup__button');
 const popupSigninButton = document.querySelector('.signin-popup__button');
 
-const menuAuthorization = document.querySelector('.menu__authorization');
-const menuNoAuthorization = document.querySelector('.menu__no-authorization');
-
 const searchForm = document.querySelector('.search__search-field');
 
 const showMoreButton = document.querySelector('.results__more-button');
 const results = document.querySelector('.results');
 const resultsList = document.querySelector('.results__list');
+
+const logoutButton = document.querySelector('.menu__logout');
+
 
 const maxCount = 3;
 
@@ -41,7 +41,7 @@ header.render(getProfile);
 
 console.log(`Bearer ${localStorage.getItem('token')}`);
 console.log('Bearer' + localStorage.getItem('token'));
-console.log(typeof  'Bearer');
+console.log(typeof 'Bearer');
 
 // пустой массив и счетчик, нужные для работы moreResults()
 let cardElementArray = [];
@@ -175,10 +175,10 @@ function signin(event) {
 
   myNewsExplorerApi.signin(userEmail, userPassword)
     .then((data) => {
-      menuNoAuthorization.classList.toggle('menu__hide');
-      menuAuthorization.classList.toggle('menu__hide');
+      // menuNoAuthorization.classList.toggle('menu__hide');
+      // menuAuthorization.classList.toggle('menu__hide');
       closePopupSignin();
-      // document.location.reload();
+      document.location.reload();
     })
     .catch((err) => {
       if (err === '401') {
@@ -204,6 +204,6 @@ buttonPopupSuccessfulClose.addEventListener('click', () => {
 buttonAuthorization.addEventListener('click', handlerRenderPopupSignin);
 popupSignupButton.addEventListener('click', signup);
 popupSigninButton.addEventListener('click', signin);
-
 showMoreButton.addEventListener('click', moreResults);
 searchForm.addEventListener('submit', cardRender);
+logoutButton.addEventListener('click', logout);

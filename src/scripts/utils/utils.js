@@ -16,6 +16,13 @@ function getUser(item) {
 // Возвращает токен юзера
 const getProfile = getUser('token');
 
+// Удаляет юзера
+function logout() {
+  localStorage.removeItem('token');
+  document.location.reload();
+}
+
+
 // Прелоудер
 function preloader(flag) {
   const newsSearch = document.querySelector('.preloader');
@@ -68,4 +75,5 @@ export {
   errorResults,
   getProfile,
   getUser,
+  logout
 };
