@@ -14,7 +14,7 @@ const USER_NOT_REGISTERED = 'Такого пользователя нет';
 
 // Конфигурация MyNewsExplorerApi
 const configMyNewsExplorerApi = {
-  // url: 'http://api.my-news-explorer.tk/',
+  // url: 'https://api.my-news-explorer.tk',
   url: 'http://localhost:3000',
 
   headers: {

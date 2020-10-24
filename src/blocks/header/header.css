@@ -4,6 +4,7 @@
 @import url(./__page/header__page.css);
 @import url(./__about/header__about.css);
 @import url(./__page-favorites/header__page-favorites.css);
+@import url(./__hide/header__hide.css);
 
 .header {
   /* border: 1px solid red; */

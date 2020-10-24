@@ -11,14 +11,14 @@ export default class Header {
   render(isLoggedIn) {
 
     if (isLoggedIn) {
-      menuNoAuthorization.classList.add('menu__hide');
+      menuNoAuthorization.classList.add('header__hide');
 
       myNewsExplorerApi.getUserData().then((data) => {
         menuLogoutButton.textContent = data.name;
       });
 
     } else {
-      menuAuthorization.classList.add('menu__hide');
+      menuAuthorization.classList.add('header__hide');
     }
   }
 }

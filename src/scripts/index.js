@@ -2,7 +2,7 @@ import "../pages/index.css";
 import Popup from './components/Popup';
 import FormValidator from "./components/FormValidator";
 import {header, myNewsExplorerApi, newsApi, NO_INTERNET, USER_EXISTS, USER_NOT_REGISTERED} from "./constants/Constants";
-import {emptyResults, errorResults, getProfile, preloader, removeAllChild, logout} from "./utils/utils.js";
+import {emptyResults, errorResults, getProfile, logout, preloader, removeAllChild} from "./utils/utils.js";
 
 import NewsCard from "./components/NewsCard";
 import NewsCardList from "./components/NewsCardList";
@@ -10,6 +10,9 @@ import NewsCardList from "./components/NewsCardList";
 const popupSignin = document.querySelector('.popup-signin');
 const popupSignup = document.querySelector('.popup-signup');
 const popupSuccessful = document.querySelector('.popup-successful');
+
+const popupMenuAuthorization = document.querySelector('.popup-menu__authorization');
+const popupMenuNoAuthorization = document.querySelector('.popup-menu__no-authorization');
 
 const formSignin = document.forms.formSignun;
 const formSignup = document.forms.formSignup;
@@ -39,6 +42,7 @@ const popupSigninToSignupButton = document.querySelector('.popup__signup-button'
 const popupSignupToSigninButton = document.querySelector('.popup__login-button');
 const popupSuccessfulEnter = document.querySelector('.popup-successful__enter');
 
+const menuSandwichButton = document.querySelector('.menu__sandwich');
 
 
 const maxCount = 3;
@@ -143,6 +147,25 @@ function handlerRenderPopupSignup() {
   popup.open();
 }
 
+// Рендер мобильного меню
+// function handlerMobileMenu() {
+//
+//   if (getProfile) {
+//     popupMenuAuthorization.style.setProperty('display', 'block');
+//   } else {
+//     popupMenuNoAuthorization.style.setProperty('display', 'block');
+//   }
+// }
+
+// Рендер мобильного меню
+function handlerMobileMenu() {
+  if (getProfile) {
+    popupMenuAuthorization.classList.toggle('menu__show');
+  } else {
+    popupMenuNoAuthorization.classList.toggle('menu__show');
+  }
+}
+
 //Закрытие попапа регистрации
 function closePopupSignup() {
   const popup = new Popup(popupSignup);
@@ -233,3 +256,5 @@ popupSignupToSigninButton.addEventListener('click', signupToSignin);
 popupSuccessfulEnter.addEventListener('click', successfulToSignin);
 
 buttonPopupSigninClose.addEventListener('click', closePopupSignin);
+
+menuSandwichButton.addEventListener('click', handlerMobileMenu);
