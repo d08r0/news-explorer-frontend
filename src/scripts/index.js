@@ -37,6 +37,9 @@ import {
 
 
 const mobileMenuAuthorizationButton = document.querySelector('.mobile-menu__authorization-button');
+const mobileMenuLogoutButton = document.querySelector('.mobile-menu__logout');
+const menuSandwichIndex = document.querySelector('.menu__sandwich_index');
+
 
 
 const maxCount = 3;
@@ -238,4 +241,5 @@ popupSigninToSignupButton.addEventListener('click', handlerRenderPopupSignup);
 popupSignupToSigninButton.addEventListener('click', handlerSignupToSignin);
 popupSuccessfulEnter.addEventListener('click', handlerSuccessfulToSignin);
 buttonPopupSigninClose.addEventListener('click', closePopupSignin);
-menuSandwichButton.addEventListener('click', handlerMobileMenu);
+menuSandwichIndex.addEventListener('click', handlerMobileMenu);
+mobileMenuLogoutButton.addEventListener('click', logout);

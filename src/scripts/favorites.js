@@ -19,7 +19,8 @@ const menuLogoutButton = document.querySelector('.menu__logout-button');
 const logoutButton = document.querySelector('.menu__logout');
 
 const popupMenuAuthorization = document.querySelector('.popup-menu__authorization');
-const menuSandwichButton = document.querySelector('.menu__sandwich');
+const menuSandwichButton = document.querySelector('.menu__sandwich_favorites');
+const mobileFavoritesLogoutButton = document.querySelector('.mobile-menu-favorites__logout');
 
 // Страница saved-articles
 const NO = 'нет';
@@ -144,6 +145,7 @@ function startFavorites() {
     });
 
   logoutButton.addEventListener('click', logout);
+  mobileFavoritesLogoutButton.addEventListener('click', logout);
 
   menuSandwichButton.addEventListener('click', () => {
     popupMenuAuthorization.classList.toggle('menu__show');

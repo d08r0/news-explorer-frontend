@@ -7,7 +7,7 @@
   <title>News explorer frontend</title>
 
   <link rel="icon" href="<%=require('./images/favicon.ico')%>" type="image/x-icon">
-
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
 <body>
 <div class="root">
@@ -22,10 +22,6 @@
           <a href="./favorites.html" class="menu__authorization-button menu__color_black">Сохранённые статьи</a>
         </li>
 
-        <!--        <li class="menu__item menu__item_border-black"><a href="" class="menu__authorization-button menu__color_black">-->
-        <!--          <span class="menu__logout-button"></span>-->
-        <!--          <img src="<%=require('./images/exit-black.svg')%>" alt="exit button" class="menu__exit-button-img"></a>-->
-        <!--        </li>-->
 
         <li class="menu__item menu__item_border-black">
           <button href="" class="menu__authorization-button menu__color_black menu__logout">
@@ -36,9 +32,9 @@
       </ul>
     </div>
 
-    <div class="menu__sandwich">
+    <button class="menu__sandwich menu__sandwich_favorites">
       <img src="<%=require('./images/icon-menu-black.svg')%>" alt="Описание фотографии">
-    </div>
+    </button>
   </header>
 
   <section class="favorites">
@@ -87,7 +83,7 @@
           </a>
         </li>
         <li class="popup-menu__item popup-menu__item_border-white">
-          <button class="menu__authorization-button mobile-menu__logout menu__color_white">Грета
+          <button class="menu__authorization-button mobile-menu-favorites__logout menu__color_white">Грета
             <img
               src="<%=require('./images/exit-white.svg')%>" alt="exit button"
               class="menu__exit-button-img"></button>
@@ -97,6 +93,6 @@
   </div>
 
 </div>
-
+<script src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
 </html>
