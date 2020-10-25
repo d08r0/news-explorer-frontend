@@ -3,61 +3,48 @@ import Popup from './components/Popup';
 import FormValidator from "./components/FormValidator";
 import {header, myNewsExplorerApi, newsApi, NO_INTERNET, USER_EXISTS, USER_NOT_REGISTERED} from "./constants/Constants";
 import {emptyResults, errorResults, getProfile, logout, preloader, removeAllChild} from "./utils/utils.js";
-
 import NewsCard from "./components/NewsCard";
 import NewsCardList from "./components/NewsCardList";
-
-const popupSignin = document.querySelector('.popup-signin');
-const popupSignup = document.querySelector('.popup-signup');
-const popupSuccessful = document.querySelector('.popup-successful');
-
-const popupMenuAuthorization = document.querySelector('.popup-menu__authorization');
-const popupMenuNoAuthorization = document.querySelector('.popup-menu__no-authorization');
-
-const formSignin = document.forms.formSignun;
-const formSignup = document.forms.formSignup;
-const newEmail = formSignup.elements.newEmail;
-const newPassword = formSignup.elements.newPassword;
-const newName = formSignup.elements.newName;
-
-const email = formSignin.elements.userEmail;
-const password = formSignin.elements.userPassword;
-
-const buttonAuthorization = document.querySelector('.menu__authorization-button');
-const buttonPopupSignupClose = document.querySelector('.signup-popup__close');
-const buttonPopupSigninClose = document.querySelector('.signin-popup__close');
-
-const buttonPopupSuccessfulClose = document.querySelector('.popup-successful__close');
-const popupSignupButton = document.querySelector('.signup-popup__button');
-const popupSigninButton = document.querySelector('.signin-popup__button');
-
-const searchForm = document.querySelector('.search__search-field');
-
-const showMoreButton = document.querySelector('.results__more-button');
-const results = document.querySelector('.results');
-const resultsList = document.querySelector('.results__list');
-
-const logoutButton = document.querySelector('.menu__logout');
-const popupSigninToSignupButton = document.querySelector('.popup__signup-button');
-const popupSignupToSigninButton = document.querySelector('.popup__login-button');
-const popupSuccessfulEnter = document.querySelector('.popup-successful__enter');
-
-const menuSandwichButton = document.querySelector('.menu__sandwich');
-
+import {
+  buttonAuthorization,
+  buttonPopupSigninClose,
+  buttonPopupSignupClose,
+  buttonPopupSuccessfulClose,
+  email,
+  formSignin,
+  formSignup,
+  logoutButton,
+  menuSandwichButton,
+  newEmail,
+  newName,
+  newPassword,
+  password,
+  popupMenuAuthorization,
+  popupMenuNoAuthorization,
+  popupSignin,
+  popupSigninButton,
+  popupSigninToSignupButton,
+  popupSignup,
+  popupSignupButton,
+  popupSignupToSigninButton,
+  popupSuccessful,
+  popupSuccessfulEnter,
+  results,
+  resultsList,
+  searchForm,
+  showMoreButton,
+} from "./constants/Elements";
 
 const maxCount = 3;
 
 header.render(getProfile);
+// console.log(`Bearer ${localStorage.getItem('token')}`);
 
-console.log(`Bearer ${localStorage.getItem('token')}`);
-console.log('Bearer' + localStorage.getItem('token'));
-console.log(typeof 'Bearer');
-
-// пустой массив и счетчик, нужные для работы moreResults()
+// Пустой массив и счетчик, нужные для работы moreResults()
 let cardElementArray = [];
 let from = 0;
 
-// рендер карточек, в т.ч. по кнопке Показать ещe
+// Рендер карточек, в т.ч. по кнопке Показать ещe
 function moreResults() {
   let until = from + maxCount;
   if (until > cardElementArray.length) {
@@ -112,19 +99,18 @@ function cardRender(event) {
 }
 
 
-//Рендер попапа успешной регистрации
+// Рендер попапа успешной регистрации
 function handlerRenderPopupSuccessful() {
   const popup = new Popup(popupSuccessful);
   closePopupSignup();
   popup.open();
 }
 
-//Рендер попапа входа
+// Рендер попапа входа
 function handlerRenderPopupSignin() {
   const popup = new Popup(popupSignin);
   const popupButton = formSignin.querySelector('.popup__button');
   const formValidator = new FormValidator(formSignin);
-
   formValidator.setEventListeners()
   popupButton.setAttribute('disabled', "");
   formValidator.resetError(formSignin);
@@ -132,30 +118,18 @@ function handlerRenderPopupSignin() {
   popup.open();
 }
 
-//Рендер попапа регистрации
+// Рендер попапа регистрации
 function handlerRenderPopupSignup() {
   const popup = new Popup(popupSignup);
   const popupButton = formSignup.querySelector('.popup__button');
   const formValidator = new FormValidator(formSignup);
-
   closePopupSignin();
-
   formValidator.setEventListeners()
   popupButton.setAttribute('disabled', "");
   formValidator.resetError(formSignup);
   formSignup.reset();
   popup.open();
 }
-
-// Рендер мобильного меню
-// function handlerMobileMenu() {
-//
-//   if (getProfile) {
-//     popupMenuAuthorization.style.setProperty('display', 'block');
-//   } else {
-//     popupMenuNoAuthorization.style.setProperty('display', 'block');
-//   }
-// }
 
 // Рендер мобильного меню
 function handlerMobileMenu() {
@@ -166,26 +140,26 @@ function handlerMobileMenu() {
   }
 }
 
-//Закрытие попапа регистрации
+// Закрытие попапа регистрации
 function closePopupSignup() {
   const popup = new Popup(popupSignup);
   popup.close();
 }
 
-//Закрытие попапа авторизации
+// Закрытие попапа авторизации
 function closePopupSignin() {
   const popup = new Popup(popupSignin);
   popup.close();
 }
 
 // Переход с попапа регистрации на попап авторизации
-function signupToSignin() {
+function handlerSignupToSignin() {
   closePopupSignup();
   handlerRenderPopupSignin();
 }
 
 // Переход с попапа успешной регистрации на попап авторизации
-function successfulToSignin() {
+function handlerSuccessfulToSignin() {
   const popup = new Popup(popupSuccessful);
 
   popup.close();
@@ -251,10 +225,7 @@ showMoreButton.addEventListener('click', moreResults);
 searchForm.addEventListener('submit', cardRender);
 logoutButton.addEventListener('click', logout);
 popupSigninToSignupButton.addEventListener('click', handlerRenderPopupSignup);
-popupSignupToSigninButton.addEventListener('click', signupToSignin);
-
-popupSuccessfulEnter.addEventListener('click', successfulToSignin);
-
+popupSignupToSigninButton.addEventListener('click', handlerSignupToSignin);
+popupSuccessfulEnter.addEventListener('click', handlerSuccessfulToSignin);
 buttonPopupSigninClose.addEventListener('click', closePopupSignin);
-
 menuSandwichButton.addEventListener('click', handlerMobileMenu);

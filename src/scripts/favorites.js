@@ -1,11 +1,9 @@
 import "../pages/favorites.css";
 import SaveCard from "./components/SaveCard";
 import NewsCardList from "./components/NewsCardList";
-import {header, myNewsExplorerApi} from "./constants/Constants";
-import {getProfile} from "./utils/utils";
+import { myNewsExplorerApi } from "./constants/Constants";
 
 const resultsList = document.querySelector('.results__list');
-
 const favoritesUserName = document.querySelector('.favorites__user-name');
 const favoritesGlobalCount = document.querySelector('.favorites__global-count');
 const favoritesDifferent = document.querySelector('.favorites__different');
@@ -13,33 +11,28 @@ const favoritesKeyWords = document.querySelector('.favorites__key-words');
 const favoritesWords = document.querySelector('.favorites__words');
 const favoritesOthers = document.querySelector('.favorites__others');
 const favoritesOthersCount = document.querySelector('.favorites__others-count');
-
 const favoritesTextInsert = document.querySelector('.favorites__text-insert');
 const menuLogoutButton = document.querySelector('.menu__logout-button');
 
 
-// страница saved-articles
+// Страница saved-articles
 const NO = 'нет';
 const SAVE_ONE = ' сохраненная статья';
 const SAVE_TWO = ' сохраненные статьи';
 const SAVE_THREE = ' сохраненных статей';
 
-// пустые объекты для рендера
+// Пустые объекты для рендера
 const objKeys = {};
 const sortKeys = {};
 
-let userName = '';
-
-// myNewsExplorerApi.getUserData().then((data) => {
-//   return userName = data.name
-// });
+// function startFavorites() {
 
 myNewsExplorerApi.getUserData().then((data) => {
   menuLogoutButton.textContent = data.name;
 });
 
-// получения объекта вида {'ключевое слово': 'count'},
-// где count - число повторений
+// Получения объекта вида {'ключевое слово': 'count'},
+// count - число повторений
 function putKeys(data) {
   data.forEach((item) => {
     if (!objKeys.hasOwnProperty(item.keyword)) {
@@ -51,8 +44,7 @@ function putKeys(data) {
   });
 }
 
-// сортировка объекта по значению ключа
-// по убыванию
+// Сортировка объекта по убыванию по значению ключа
 function sort(obj) {
   Object.keys(obj)
     .sort((a, b) => {
@@ -63,7 +55,7 @@ function sort(obj) {
     });
 }
 
-// выбор падежа для 'сохраненных статей'
+// Выбор падежа для 'сохраненных статей'
 function renerCase(array) {
   if (array.length === 1) {
     favoritesDifferent.textContent = SAVE_ONE;
@@ -108,7 +100,7 @@ function renderTextBlock(array, obj) {
   }
 }
 
-// функция рендера карточек
+// Функция рендера карточек
 function cardRender(initialCards) {
   const resultSaves = document.querySelector('.results__saves');
   if (initialCards.length === 0) {
@@ -125,7 +117,7 @@ function cardRender(initialCards) {
   }
 }
 
-// рендер текстового блока и карточек
+// Рендер текстового блока и карточек
 myNewsExplorerApi.getArticles()
   .then((data) => {
     console.log(data);
@@ -140,3 +132,12 @@ myNewsExplorerApi.getArticles()
   .catch((err) => {
     console.log(err);
   });
+
+// }
+
+// Преход на главную если пользователь не авторизован
+// if (getProfile) {
+//   startFavorites();
+// } else {
+//   window.location.href = 'index.html';
+// }

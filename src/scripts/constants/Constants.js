@@ -14,8 +14,8 @@ const USER_NOT_REGISTERED = 'Такого пользователя нет';
 
 // Конфигурация MyNewsExplorerApi
 const configMyNewsExplorerApi = {
-  // url: 'https://api.my-news-explorer.tk',
-  url: 'http://localhost:3000',
+  url: 'https://api.my-news-explorer.tk',
+  // url: 'http://localhost:3000',
 
   headers: {
     'Content-Type': 'application/json',
@@ -23,7 +23,8 @@ const configMyNewsExplorerApi = {
 };
 
 // Конфигурация NewsAPI
-const newsURL = 'https://newsapi.org/v2/everything?';
+// const newsURL = 'https://newsapi.org/v2/everything?';
+const newsURL = 'https://nomoreparties.co/news/v2/everything?';
 const apiKey = 'acc260241f7245f399853d8a25739fcf';
 const newsApi = new NewsApi(newsURL, apiKey);
 
