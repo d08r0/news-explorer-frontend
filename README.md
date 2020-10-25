@@ -1,15 +1,15 @@
 # **News explorer**
-Версия 0.0.8
+Версия 0.0.46
 
 ## О проекте:
 Ресурс для поиска новостей
 
 ## Основной функционал: 
-- Поиск новостей (TODO)
-- Сохранение новостей (TODO)
+- Поиск новостей
+- Сохранение новостей
 
 ## Стэк технологий:
-ES6, Babel, OOP, CSS3, HTML5, Webpack, OOP, BEM
+ES6, Babel, OOP, CSS3, HTML5, Webpack, OOP, BEM, JS
 
 ## Пакеты которые используются в сборках:
 - [Babel CLI](https://babeljs.io/docs/en/babel-cli#docsNav)
@@ -31,6 +31,6 @@ ES6, Babel, OOP, CSS3, HTML5, Webpack, OOP, BEM
 - Запустить сборку production-билда - `npm run build`
 - Разместить production-билд на github pages - `npm run deploy`
 
-## Ссылка на github pages:
-https://d08r0.github.io/news-explorer-frontend/
+## Ссылка на ресурс:
+https://my-news-explorer.tk
 
