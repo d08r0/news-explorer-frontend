@@ -19,7 +19,8 @@ const getProfile = getUser('token');
 // Удаляет юзера
 function logout() {
   localStorage.removeItem('token');
-  document.location.reload();
+  window.location.href = 'index.html';
+  // document.location.reload();
 }
 
 

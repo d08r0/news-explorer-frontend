@@ -3,6 +3,8 @@ import { myNewsExplorerApi } from "../constants/Constants";
 const menuAuthorization = document.querySelector('.menu__authorization');
 const menuNoAuthorization = document.querySelector('.menu__no-authorization');
 
+const menuLogoutButton = document.querySelector('.menu__logout-button');
+
 export default class Header {
   constructor() {
   }
