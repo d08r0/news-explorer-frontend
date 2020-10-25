@@ -6,11 +6,20 @@ const popupMenuAuthorization = document.querySelector('.popup-menu__authorizatio
 const popupMenuNoAuthorization = document.querySelector('.popup-menu__no-authorization');
 const formSignin = document.forms.formSignun;
 const formSignup = document.forms.formSignup;
+
 const newEmail = formSignup.elements.newEmail;
 const newPassword = formSignup.elements.newPassword;
 const newName = formSignup.elements.newName;
 const email = formSignin.elements.userEmail;
 const password = formSignin.elements.userPassword;
+
+
+// const newEmail = document.querySelector('.popup__input_type-email');
+// const newPassword = document.querySelector('.popup__input_type-password');
+// const newName = document.querySelector('.popup__input_type-name');
+// const email = document.querySelector('.popup__input_type-email');
+// const password = document.querySelector('.popup__input_type-password');
+
 const buttonAuthorization = document.querySelector('.menu__authorization-button');
 const buttonPopupSignupClose = document.querySelector('.signup-popup__close');
 const buttonPopupSigninClose = document.querySelector('.signin-popup__close');
@@ -58,11 +67,6 @@ export {
   popupMenuNoAuthorization,
   formSignin,
   formSignup,
-  newEmail,
-  newPassword,
-  newName,
-  email,
-  password,
   buttonAuthorization,
   buttonPopupSignupClose,
   buttonPopupSigninClose,
@@ -78,4 +82,9 @@ export {
   popupSignupToSigninButton,
   popupSuccessfulEnter,
   menuSandwichButton,
+  newEmail,
+  newPassword,
+  newName,
+  email,
+  password,
 }

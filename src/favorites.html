@@ -6,8 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>News explorer frontend</title>
 
-  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
-
   <link rel="icon" href="<%=require('./images/favicon.ico')%>" type="image/x-icon">
 
 </head>
@@ -24,15 +22,15 @@
           <a href="./favorites.html" class="menu__authorization-button menu__color_black">Сохранённые статьи</a>
         </li>
 
-<!--        <li class="menu__item menu__item_border-black"><a href="" class="menu__authorization-button menu__color_black">-->
-<!--          <span class="menu__logout-button"></span>-->
-<!--          <img src="<%=require('./images/exit-black.svg')%>" alt="exit button" class="menu__exit-button-img"></a>-->
-<!--        </li>-->
+        <!--        <li class="menu__item menu__item_border-black"><a href="" class="menu__authorization-button menu__color_black">-->
+        <!--          <span class="menu__logout-button"></span>-->
+        <!--          <img src="<%=require('./images/exit-black.svg')%>" alt="exit button" class="menu__exit-button-img"></a>-->
+        <!--        </li>-->
 
         <li class="menu__item menu__item_border-black">
           <button href="" class="menu__authorization-button menu__color_black menu__logout">
-          <span class="menu__logout-button"></span>
-          <img src="<%=require('./images/exit-black.svg')%>" alt="exit button" class="menu__exit-button-img"></button>
+            <span class="menu__logout-button"></span>
+            <img src="<%=require('./images/exit-black.svg')%>" alt="exit button" class="menu__exit-button-img"></button>
         </li>
 
       </ul>
@@ -43,23 +41,20 @@
     </div>
   </header>
 
-  <!--  ==========================================-->
   <section class="favorites">
     <span class="favorites__text">Сохранённые статьи</span>
     <h3 class="favorites__title"><span class="favorites__user-name"></span>
       <span class="favorites__text-insert"></span>
       <span
-      class="favorites__global-count"></span><span class="favorites__different"></span></h3>
+        class="favorites__global-count"></span><span class="favorites__different"></span></h3>
     <p class="favorites__key-words">По ключевым словам: <span class="favorites__words"></span><span
       class="favorites__others"><span class="favorites__others-count"></span></span></p>
   </section>
 
-  <!--  =================================-->
   <section class="results results__saves">
     <div class="results__list results__list_favorites">
     </div>
   </section>
-  <!--  =================================-->
 
   <footer class="footer">
     <p class="footer__copyright">&#169; 2020 Erik Burygin</p>
@@ -80,31 +75,28 @@
     </nav>
   </footer>
 
-<!--  <div class="popup-menu">-->
-<!--    <div class="popup-menu__content">-->
-<!--      <ul class="popup-menu__list">-->
-<!--        <li class="popup-menu__item">-->
-<!--          <a href="./index.html" class="menu__main menu__color_white">Главная</a>-->
-<!--        </li>-->
-<!--        <li class="popup-menu__item">-->
-<!--          <a href="./favorites.html" class="menu__main menu__color_white">Сохранённые-->
-<!--            статьи-->
-<!--          </a>-->
-<!--        </li>-->
-<!--        <li class="popup-menu__item popup-menu__item_border-white">-->
-<!--          <a href="" class="menu__authorization-button menu__color_white">Грета-->
-<!--            <img-->
-<!--              src="<%=require('./images/exit-white.svg')%>" alt="exit button"-->
-<!--              class="menu__exit-button-img"></a>-->
-<!--        </li>-->
-<!--      </ul>-->
-<!--    </div>-->
-<!--  </div>-->
+  <div class="popup-menu popup-menu__authorization">
+    <div class="popup-menu__content">
+      <ul class="popup-menu__list">
+        <li class="popup-menu__item">
+          <a href="./index.html" class="menu__main menu__color_white">Главная</a>
+        </li>
+        <li class="popup-menu__item">
+          <a href="./favorites.html" class="menu__main menu__color_white">Сохранённые
+            статьи
+          </a>
+        </li>
+        <li class="popup-menu__item popup-menu__item_border-white">
+          <button class="menu__authorization-button mobile-menu__logout menu__color_white">Грета
+            <img
+              src="<%=require('./images/exit-white.svg')%>" alt="exit button"
+              class="menu__exit-button-img"></button>
+        </li>
+      </ul>
+    </div>
+  </div>
 
 </div>
 
-<script src="<%= htmlWebpackPlugin.files.js %>"></script>
-
 </body>
-<script src="scripts/favorites.js"></script>
 </html>

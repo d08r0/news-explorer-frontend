@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>News explorer frontend</title>
 
-  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
 
 <body>
@@ -193,10 +192,10 @@
           </a>
         </li>
         <li class="popup-menu__item popup-menu__item_border-white">
-          <a href="" class="menu__authorization-button menu__color_white">Грета
+          <button class="menu__authorization-button menu__color_white">Грета
             <img
               src="<%=require('./images/exit-white.svg')%>" alt="exit button"
-              class="menu__exit-button-img"></a>
+              class="menu__exit-button-img"></button>
         </li>
       </ul>
     </div>
@@ -208,13 +207,8 @@
         <li class="popup-menu__item">
           <a href="./index.html" class="menu__main menu__color_white">Главная</a>
         </li>
-        <li class="popup-menu__item">
-          <a href="./favorites.html" class="menu__main menu__color_white">Сохранённые
-            статьи
-          </a>
-        </li>
         <li class="popup-menu__item popup-menu__item_border-white">
-          <a href="" class="menu__authorization-button menu__color_white">Авторизоваться</a>
+          <button class="menu__authorization-button mobile-menu__authorization-button menu__color_white">Авторизоваться</button>
         </li>
       </ul>
     </div>
@@ -222,12 +216,7 @@
 
 </div>
 
-
-<script src="<%= htmlWebpackPlugin.files.js %>"></script>
-
 </body>
-
-<script src="scripts/index.js"></script>
 </html>
 
 

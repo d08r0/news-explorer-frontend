@@ -10,15 +10,10 @@ import {
   buttonPopupSigninClose,
   buttonPopupSignupClose,
   buttonPopupSuccessfulClose,
-  email,
   formSignin,
   formSignup,
   logoutButton,
   menuSandwichButton,
-  newEmail,
-  newName,
-  newPassword,
-  password,
   popupMenuAuthorization,
   popupMenuNoAuthorization,
   popupSignin,
@@ -33,7 +28,16 @@ import {
   resultsList,
   searchForm,
   showMoreButton,
+  newEmail,
+  newPassword,
+  newName,
+  email,
+  password,
 } from "./constants/Elements";
+
+
+const mobileMenuAuthorizationButton = document.querySelector('.mobile-menu__authorization-button');
+
 
 const maxCount = 3;
 
@@ -216,6 +220,12 @@ buttonPopupSignupClose.addEventListener('click', () => {
 buttonPopupSuccessfulClose.addEventListener('click', () => {
   const popup = new Popup(popupSuccessful);
   popup.close();
+});
+
+mobileMenuAuthorizationButton.addEventListener('click', () => {
+  popupMenuNoAuthorization.classList.toggle('menu__show');
+  const popup = new Popup(popupSignin);
+  popup.open()
 });
 
 buttonAuthorization.addEventListener('click', handlerRenderPopupSignin);
