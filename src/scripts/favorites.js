@@ -2,8 +2,7 @@ import "../pages/favorites.css";
 import SaveCard from "./components/SaveCard";
 import NewsCardList from "./components/NewsCardList";
 import {myNewsExplorerApi} from "./constants/Constants";
-import {logout, getProfile} from "./utils/utils.js";
-
+import {getProfile, logout} from "./utils/utils.js";
 
 const resultsList = document.querySelector('.results__list');
 const favoritesUserName = document.querySelector('.favorites__user-name');
@@ -15,6 +14,7 @@ const favoritesOthers = document.querySelector('.favorites__others');
 const favoritesOthersCount = document.querySelector('.favorites__others-count');
 const favoritesTextInsert = document.querySelector('.favorites__text-insert');
 const menuLogoutButton = document.querySelector('.menu__logout-button');
+const mobileMenuLogoutButton = document.querySelector('.mobile-menu__logout-button');
 
 const logoutButton = document.querySelector('.menu__logout');
 
@@ -39,6 +39,7 @@ function startFavorites() {
 
   myNewsExplorerApi.getUserData().then((data) => {
     menuLogoutButton.textContent = data.name;
+    mobileMenuLogoutButton.textContent = data.name;
   });
 
 
@@ -157,7 +158,6 @@ function startFavorites() {
 if (getProfile) {
   startFavorites();
 }
-
 
 
 // Преход на главную если пользователь не авторизован

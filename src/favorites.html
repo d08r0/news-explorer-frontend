@@ -7,7 +7,7 @@
   <title>News explorer frontend</title>
 
   <link rel="icon" href="<%=require('./images/favicon.ico')%>" type="image/x-icon">
-  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+<!--  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">-->
 </head>
 <body>
 <div class="root">
@@ -83,7 +83,8 @@
           </a>
         </li>
         <li class="popup-menu__item popup-menu__item_border-white">
-          <button class="menu__authorization-button mobile-menu-favorites__logout menu__color_white">Грета
+          <button class="menu__authorization-button mobile-menu-favorites__logout menu__color_white">
+            <span class="mobile-menu__logout-button">Грета</span>
             <img
               src="<%=require('./images/exit-white.svg')%>" alt="exit button"
               class="menu__exit-button-img"></button>
@@ -93,6 +94,6 @@
   </div>
 
 </div>
-<script src="<%= htmlWebpackPlugin.files.js %>"></script>
+<!--<script src="<%= htmlWebpackPlugin.files.js %>"></script>-->
 </body>
 </html>

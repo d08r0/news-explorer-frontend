@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>News explorer frontend</title>
-  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+<!--  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">-->
 </head>
 
 <body>
@@ -192,7 +192,8 @@
           </a>
         </li>
         <li class="popup-menu__item popup-menu__item_border-white">
-          <button class="menu__authorization-button mobile-menu__logout menu__color_white">Грета
+          <button class="menu__authorization-button mobile-menu__logout menu__color_white">
+            <span class="mobile-menu__logout-button">Грета</span>
             <img
               src="<%=require('./images/exit-white.svg')%>" alt="exit button"
               class="menu__exit-button-img"></button>
@@ -215,7 +216,7 @@
   </div>
 
 </div>
-<script src="<%= htmlWebpackPlugin.files.js %>"></script>
+<!--<script src="<%= htmlWebpackPlugin.files.js %>"></script>-->
 </body>
 </html>
 
