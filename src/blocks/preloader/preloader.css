@@ -1,12 +1,9 @@
-@import url(./__circle/preloader__circle.css);
-@import url(./__message/preloader__message.css);
+@import url('./__text/preloader__text.css');
+@import url('./preloader-container/preloader-container.css');
+@import url('./preloader-circle/preloader-circle.css');
+@import url('./_is-opened/preloader_is-opened.css');
 
 .preloader {
-	margin: 0;
-	display: none;
-	height: 282px;
-  position: relative;
-	background: #F5F6F7;
+  display: none;
+  background: #f5f6f7;
 }
-
-

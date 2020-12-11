@@ -18,6 +18,8 @@
 @import url(../blocks/search-error/search-error.css);
 @import url(../blocks/not-found/not-found.css);
 @import url(../blocks/popup-menu/popup-menu.css);
+@import url(../blocks/results/results.css);
+@import url(../blocks/result-card/result-card.css);
 
 body {
   background-color: white;

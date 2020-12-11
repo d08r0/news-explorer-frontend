@@ -1,0 +1,14 @@
+@import url(./__title/results__title.css);
+@import url(./__list/results__list.css);
+@import url(./__list/_favorites/results__list_favorites.css);
+@import url(./__more-button/results__more-button.css);
+@import url(./__more-button/_is-opened/results__more-button_is-opened.css);
+@import url(./_is-opened/results_is-opened.css);
+
+.results {
+  width: 100%;
+  margin:auto;
+  background-color: #F5F6F7;
+  display: none;
+  flex-direction: column;
+}

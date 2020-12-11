@@ -1,0 +1,9 @@
+.popup-menu__authorization {
+  display: none;
+}
+
+@media screen AND (max-width: 320px) {
+  .popup-menu__authorization {
+    /*display: block;*/
+  }
+}

@@ -1,0 +1,6 @@
+.popup__login-button {
+  border: none;
+  background: none;
+  color: #2F71E5;
+  cursor: url(../../../images/Pointer.png), pointer;
+}

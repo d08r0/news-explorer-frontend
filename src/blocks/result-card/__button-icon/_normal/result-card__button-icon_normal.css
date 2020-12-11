@@ -1,0 +1,7 @@
+.result-card__button-icon_normal {
+  background-image: url(../../../../images/save_icon_normal.svg);
+}
+
+.result-card__button-icon_normal:hover {
+  background-image: url(../../../../images/save_icon_hover.svg);
+}

@@ -1,0 +1,9 @@
+.menu__show {
+  display: none;
+}
+
+@media screen AND (max-width: 600px) {
+  .menu__show {
+    display: block;
+  }
+}

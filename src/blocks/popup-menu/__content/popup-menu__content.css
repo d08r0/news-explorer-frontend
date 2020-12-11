@@ -1,5 +1,8 @@
 .popup-menu__content {
-  width: 430px;
+  /*width: 430px;*/
+  /*width: 100%;*/
+  /*border: 1px solid red;*/
+  min-width: 430px;
   background-color: black;
   border-radius: 10px;
   position: relative;

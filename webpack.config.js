@@ -19,14 +19,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.js$/,  // правило к JS-файлам
         exclude: /node_modules/,
         use: {
           loader: "babel-loader"
         }
       },
       {
-        test: /\.css$/i,
+        test: /\.css$/i, // правило к CSS-файлам
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -78,14 +78,14 @@ module.exports = {
       filename: './styles/style.[contenthash].css',
     }),
     new HtmlWebpackPlugin({
-      template: 'src/index.html',
+      template: 'src/index.html',  // откуда брать образец для сравнения с текущим видом проекта
       filename: 'index.html',
-      favicon: 'src/images/favicon.ico'
+      favicon: 'src/images/favicon.ico' // откуда брать фавикон
     }),
     new HtmlWebpackPlugin({
-      template: 'src/favorites.html',
+      template: 'src/favorites.html',  // откуда брать образец для сравнения с текущим видом проекта
       filename: 'favorites.html',
-      favicon: 'src/images/favicon.ico'
+      favicon: 'src/images/favicon.ico'  // откуда брать фавикон
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,
